@@ -1,11 +1,42 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/altGreen</item>
+        <item name="colorPrimaryDark">@color/darkPurple</item>
+        <item name="colorAccent">@color/darkPurple</item>
     </style>
+
+    <style name="heading">
+        <item name="android:textSize">
+            36sp
+        </item>
+        <item name="android:textColor">
+            @color/darkPurple
+        </item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/montserrat_extrabold</item>
+    </style>
+
+    <style name="subHeading">
+        <item name="android:textSize">
+            18sp
+        </item>
+        <item name="android:textColor">
+            @color/darkPurple
+        </item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/montserrat_regular</item>
+    </style>
+
+    <style name="altText">
+        <item name="android:textSize">
+            18sp
+        </item>
+        <item name="android:textColor">
+            @color/altGreen
+        </item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/montserrat_regular</item>
+    </style>
+
 
 </resources>
