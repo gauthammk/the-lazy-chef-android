@@ -9,13 +9,13 @@
 
     <!-- Search by ingredients -->
     <TextView
-        android:id="@+id/nutritionQAHeading"
+        android:id="@+id/searchByIngredientsHeading"
         android:layout_width="330dp"
         android:layout_height="99dp"
         android:layout_marginBottom="187dp"
         android:gravity="center_horizontal|center_vertical"
         android:lineHeight="44sp"
-        android:text="@string/nutrition_qa"
+        android:text="@string/search_by_ingredients"
         android:textAppearance="@style/heading"
         android:translationZ="1dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
@@ -25,17 +25,17 @@
 
     <!-- Subheading -->
     <TextView
-        android:id="@+id/nutritionQASubheading"
+        android:id="@+id/searchByIngredientsSubheading"
         android:layout_width="330dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="21dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="33dp"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/nutrition_qa_subheading"
+        android:text="@string/search_by_ingredients_subheading"
         android:textAppearance="@style/subHeading"
         android:translationZ="1dp"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
+        app:layout_constraintEnd_toEndOf="@+id/searchByIngredientsHeading"
+        app:layout_constraintStart_toStartOf="@+id/searchByIngredientsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/searchByIngredientsHeading"
         tools:targetApi="lollipop" />
 
     <ImageView
@@ -75,18 +75,18 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/clipboardPicture"
+        android:id="@+id/groceryPicture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="113dp"
-        android:background="@drawable/ic_clipboard"
+        android:background="@drawable/ic_grocery"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
+        app:layout_constraintTop_toBottomOf="@+id/searchByIngredientsHeading"
         tools:ignore="ContentDescription" />
 
     <EditText
-        android:id="@+id/askMeAnything"
+        android:id="@+id/enterIngredients"
         android:layout_width="330dp"
         android:layout_height="62dp"
         android:layout_marginTop="246dp"
@@ -95,19 +95,19 @@
         android:ems="10"
         android:fontFamily="@font/montserrat_semibold"
         android:gravity="center"
-        android:hint="@string/ask_me_anything"
+        android:hint="@string/add_ingredients"
         android:inputType="textPersonName"
         android:textColor="@color/darkPurple"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
+        app:layout_constraintEnd_toEndOf="@+id/searchByIngredientsHeading"
+        app:layout_constraintStart_toStartOf="@+id/searchByIngredientsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/searchByIngredientsHeading"
         tools:targetApi="jelly_bean" />
 
     <Button
-        android:id="@+id/goButton"
-        android:layout_width="108dp"
-        android:layout_height="52dp"
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="420dp"
         android:background="@drawable/menu_button"
         android:fontFamily="@font/montserrat_semibold"
@@ -116,23 +116,23 @@
         android:textAllCaps="false"
         android:textColor="@color/altGreen"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
+        app:layout_constraintEnd_toEndOf="@+id/searchByIngredientsHeading"
+        app:layout_constraintStart_toStartOf="@+id/searchByIngredientsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/searchByIngredientsHeading"
         tools:targetApi="jelly_bean" />
 
     <TextView
-        android:id="@+id/exampleQuestion"
+        android:id="@+id/exampleIngredients"
         android:layout_width="330dp"
         android:layout_height="62dp"
         android:layout_marginTop="333dp"
         android:gravity="center"
-        android:text="@string/example_question"
+        android:text="@string/example_ingredients"
         android:textAppearance="@style/regularText"
         android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
+        app:layout_constraintEnd_toEndOf="@+id/searchByIngredientsHeading"
+        app:layout_constraintStart_toStartOf="@+id/searchByIngredientsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/searchByIngredientsHeading"
         tools:targetApi="jelly_bean" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

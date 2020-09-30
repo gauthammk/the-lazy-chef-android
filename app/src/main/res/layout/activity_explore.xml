@@ -11,12 +11,13 @@
     <TextView
         android:id="@+id/explore"
         android:layout_width="330dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="238dp"
+        android:layout_height="99dp"
+        android:layout_marginBottom="187dp"
         android:gravity="center_horizontal|center_vertical"
         android:lineHeight="44sp"
         android:text="@string/explore"
         android:textAppearance="@style/heading"
+        android:translationZ="1dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +28,7 @@
         android:id="@+id/trivia"
         android:layout_width="330dp"
         android:layout_height="47dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/trivia"
         android:textAppearance="@style/subHeading"
@@ -41,7 +42,7 @@
         android:id="@+id/findRecipes"
         android:layout_width="157dp"
         android:layout_height="97dp"
-        android:layout_marginTop="175dp"
+        android:layout_marginTop="141dp"
         android:background="@drawable/menu_button"
         android:onClick="onClickBtn"
         android:text="@string/find_recipes"
@@ -82,7 +83,7 @@
         android:id="@+id/searchByIngredients"
         android:layout_width="157dp"
         android:layout_height="97dp"
-        android:layout_marginTop="175dp"
+        android:layout_marginTop="141dp"
         android:background="@drawable/menu_button"
         android:onClick="onClickBtn"
         android:text="@string/search_by_ingredients"
@@ -123,7 +124,7 @@
         android:id="@+id/winePairings"
         android:layout_width="157dp"
         android:layout_height="97dp"
-        android:layout_marginTop="289dp"
+        android:layout_marginTop="255dp"
         android:background="@drawable/menu_button"
         android:onClick="onClickBtn"
         android:text="@string/wine_parings"
@@ -165,7 +166,7 @@
         android:id="@+id/nutritionQA"
         android:layout_width="157dp"
         android:layout_height="97dp"
-        android:layout_marginTop="289dp"
+        android:layout_marginTop="255dp"
         android:background="@drawable/menu_button"
         android:onClick="onClickBtn"
         android:orientation="vertical"
@@ -197,7 +198,7 @@
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/montserrat_semibold"
             android:gravity="center_vertical"
-            android:text="@string/nutrition_q_and_a"
+            android:text="@string/nutrition_qa"
             android:textColor="@color/altGreen"
             android:textSize="10sp" />
     </RelativeLayout>
@@ -207,7 +208,7 @@
         android:id="@+id/recipeOfTheDay"
         android:layout_width="330dp"
         android:layout_height="81dp"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="369dp"
         android:background="@drawable/menu_button"
         android:fontFamily="@font/montserrat_semibold"
         android:onClick="onClickBtn"
@@ -229,5 +230,32 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ic_ellipse_2"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ic_ellipse_3"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_ellipse_1"
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

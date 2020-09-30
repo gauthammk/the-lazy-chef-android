@@ -25,7 +25,7 @@
         <item name="android:textColor">
             @color/darkPurple
         </item>
-        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/montserrat_regular</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/montserrat_semibold</item>
     </style>
 
     <style name="altText">
@@ -37,6 +37,17 @@
         </item>
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/montserrat_regular</item>
     </style>
+
+    <style name="regularText">
+        <item name="android:textSize">
+            12sp
+        </item>
+        <item name="android:textColor">
+            @color/darkPurple
+        </item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/montserrat_regular</item>
+    </style>
+
 
 
 </resources>
