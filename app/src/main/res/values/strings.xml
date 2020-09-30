@@ -7,6 +7,20 @@
     <string name="find_recipes">Find recipes</string>
     <string name="search_by_ingredients">Search by ingredients</string>
     <string name="wine_parings">Wine pairings</string>
-    <string name="nutrition_q_and_a">Nutrition QA</string>
+    <string name="nutrition_qa">Nutrition QA</string>
     <string name="recipe_of_the_day">Recipe of the day</string>
+    <string name="search_by_ingredients_subheading">Find the perfect recipe for the items in your kitchen!</string>
+    <string name="add_ingredients">Enter ingredients</string>
+    <string name="go">Go</string>
+    <string name="example_ingredients">eg. tomato,pasta</string>
+    <string name="wine_pairings_subheading">\"Drinking good wine with good food in good company is one of life\'s most civilized pleasures.\" -Michael Broadbent</string>
+    <string name="enter_wine_type">Enter wine type</string>
+    <string name="example_wines">eg.  Merlot</string>
+    <string name="find_recipes_subheading">Browse the largest online database of recipes and cook up a storm!</string>
+    <string name="enter_dish">Enter dish</string>
+    <string name="example_dish">eg. black bean burrito</string>
+    <string name="advanced_search">Advanced Search</string>
+    <string name="nutrition_qa_subheading">Worried about how many carbs are in your cheat meal? We\’ve got your back.</string>
+    <string name="ask_me_anything">Ask me anything</string>
+    <string name="example_question">eg. how much protein in chicken</string>
 </resources>

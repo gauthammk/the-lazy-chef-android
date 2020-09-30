@@ -17,7 +17,9 @@ public class MainActivity extends AppCompatActivity {
         {
             this.getSupportActionBar().hide();
         }
-        catch (NullPointerException e){}
+        catch (NullPointerException e){
+            System.out.println("Textbox could not be concealed.");
+        }
         setContentView(R.layout.activity_main);
 
         // going to explore screen
