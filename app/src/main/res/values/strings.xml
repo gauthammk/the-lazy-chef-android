@@ -19,8 +19,15 @@
     <string name="find_recipes_subheading">Browse the largest online database of recipes and cook up a storm!</string>
     <string name="enter_dish">Enter dish</string>
     <string name="example_dish">eg. black bean burrito</string>
-    <string name="advanced_search">Advanced Search</string>
+    <string name="customize">Customize</string>
     <string name="nutrition_qa_subheading">Worried about how many carbs are in your cheat meal? We\’ve got your back.</string>
     <string name="ask_me_anything">Ask me anything</string>
     <string name="example_question">eg. how much protein in chicken</string>
+    <string name="recipes_result">Recipes</string>
+    <string name="recipes_result_subheading">Search results for “bean burrito”</string>
+    <string name="pairings">Pairings</string>
+    <string name="pairings_subheading">Cabernet Sauvignon is a dry red wine which is bold and full bodied. It goes especially well with stew, steak, chili, jjigae, and cholent.</string>
+    <string name="nutrition_answer">In 1 serving in chicken, there are 16.33 g of Fat. This amount covers 25% of your daily needs of Fat.</string>
+    <string name="nutrition_ans">Answer</string>
+
 </resources>

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NutritionQA"></activity>
+        <activity android:name=".NutritionAnswer"/>
+        <activity android:name=".RecipesResult" />
+        <activity android:name=".PairingsResult" />
+        <activity android:name=".NutritionQA" />
         <activity android:name=".WinePairings" />
         <activity android:name=".FindRecipes" />
         <activity android:name=".SearchByIngredients" />

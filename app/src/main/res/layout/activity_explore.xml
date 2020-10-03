@@ -228,7 +228,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintGuide_begin="366dp"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView

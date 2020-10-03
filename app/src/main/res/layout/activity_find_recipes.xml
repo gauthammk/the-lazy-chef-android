@@ -104,14 +104,14 @@
         tools:targetApi="jelly_bean" />
 
     <Button
-        android:id="@+id/advancedSearchButton"
+        android:id="@+id/customizeButton"
         android:layout_width="249dp"
         android:layout_height="52dp"
         android:layout_marginTop="420dp"
         android:background="@drawable/menu_button"
         android:fontFamily="@font/montserrat_semibold"
         android:onClick="onClickBtn"
-        android:text="@string/advanced_search"
+        android:text="@string/customize"
         android:textAllCaps="false"
         android:textColor="@color/altGreen"
         android:textSize="18sp"

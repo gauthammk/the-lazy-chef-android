@@ -25,18 +25,18 @@
 
     <!-- Subheading -->
     <TextView
-        android:id="@+id/nutritionQASubheading"
-        android:layout_width="330dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="21dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/nutrition_qa_subheading"
-        android:textAppearance="@style/subHeading"
-        android:translationZ="1dp"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
-        tools:targetApi="lollipop" />
+    android:id="@+id/nutritionQASubheading"
+    android:layout_width="330dp"
+    android:layout_height="71dp"
+    android:layout_marginTop="21dp"
+    android:gravity="center_horizontal|center_vertical"
+    android:text="@string/nutrition_qa_subheading"
+    android:textAppearance="@style/subHeading"
+    android:translationZ="1dp"
+    app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
+    app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
+    app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
+    tools:targetApi="lollipop" />
 
     <ImageView
         android:id="@+id/ellipse2"

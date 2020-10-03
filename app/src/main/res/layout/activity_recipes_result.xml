@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".RecipesResult">
+
+    <ImageView
+        android:id="@+id/ellipse2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ic_ellipse_2"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ellipse3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ic_ellipse_3"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginLeft="16dp"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_begin="366dp"
+    app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/recipesResultsHeading"
+        android:layout_width="330dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginBottom="190dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:lineHeight="44sp"
+        android:text="@string/recipes_result"
+        android:textAppearance="@style/heading"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="p" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="157dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/menu_border_button"
+        app:layout_constraintEnd_toEndOf="@+id/recipesResultsHeading"
+        app:layout_constraintHorizontal_bias="0.005"
+        app:layout_constraintStart_toStartOf="@+id/recipesResultsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1"
+        tools:ignore="SmallSp"
+        tools:targetApi="jelly_bean" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="157dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/menu_border_button"
+        app:layout_constraintEnd_toEndOf="@+id/recipesResultsHeading"
+        app:layout_constraintHorizontal_bias="0.005"
+        app:layout_constraintStart_toStartOf="@+id/recipesResultsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/recipesResultsHeading"
+        tools:ignore="SmallSp"
+        tools:targetApi="jelly_bean" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="157dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/menu_border_button"
+        app:layout_constraintEnd_toEndOf="@+id/recipesResultsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/recipesResultsHeading"
+        tools:ignore="SmallSp"
+        tools:targetApi="jelly_bean" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="157dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/menu_border_button"
+        app:layout_constraintEnd_toEndOf="@+id/recipesResultsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        tools:ignore="SmallSp"
+        tools:targetApi="jelly_bean" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout6"
+        android:layout_width="157dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/menu_border_button"
+        app:layout_constraintEnd_toEndOf="@+id/recipesResultsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4"
+        tools:ignore="SmallSp"
+        tools:targetApi="jelly_bean" />
+
+    <ImageView
+        android:id="@+id/ellipse1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_ellipse_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="157dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/menu_border_button"
+        app:layout_constraintEnd_toEndOf="@+id/recipesResultsHeading"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/recipesResultsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3"
+        tools:ignore="SmallSp"
+        tools:targetApi="jelly_bean" />
+
+    <TextView
+        android:id="@+id/recipesResultsSubheading"
+        android:layout_width="330dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/recipes_result_subheading"
+        android:textAppearance="@style/subHeading"
+        android:translationZ="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/recipesResultsHeading"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/recipesResultsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/recipesResultsHeading"
+        tools:targetApi="lollipop" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
