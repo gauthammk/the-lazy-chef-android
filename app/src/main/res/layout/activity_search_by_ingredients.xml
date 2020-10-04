@@ -105,10 +105,10 @@
         tools:targetApi="jelly_bean" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="420dp"
+        android:id="@+id/goButton"
+        android:layout_width="108dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="383dp"
         android:background="@drawable/menu_button"
         android:fontFamily="@font/montserrat_semibold"
         android:onClick="onClickBtn"
@@ -123,9 +123,9 @@
 
     <TextView
         android:id="@+id/exampleIngredients"
-        android:layout_width="330dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="333dp"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:layout_marginTop="313dp"
         android:gravity="center"
         android:text="@string/example_ingredients"
         android:textAppearance="@style/regularText"
@@ -134,5 +134,18 @@
         app:layout_constraintStart_toStartOf="@+id/searchByIngredientsHeading"
         app:layout_constraintTop_toBottomOf="@+id/searchByIngredientsHeading"
         tools:targetApi="jelly_bean" />
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_back_arrow"
+        tools:ignore="ContentDescription"
+        android:onClick="onClickBtn"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

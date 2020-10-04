@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.thelazychef">
+    <!-- Internet permissions for OkHTTP -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -9,7 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NutritionQA"></activity>
+        <activity android:name=".SearchByIngredientsResults"></activity>
+        <activity android:name=".WinePairingsResults" />
+        <activity android:name=".FindRecipesResults" />
+        <activity android:name=".NutritionQAResults" />
+        <activity android:name=".Test" />
+        <activity android:name=".NutritionQA" />
         <activity android:name=".WinePairings" />
         <activity android:name=".FindRecipes" />
         <activity android:name=".SearchByIngredients" />

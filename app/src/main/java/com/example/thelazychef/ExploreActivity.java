@@ -62,6 +62,15 @@ public class ExploreActivity extends AppCompatActivity {
                 startActivity(explorePageOpener);
             }
         });
+
+        Button recipeOfTheDay = findViewById(R.id.recipeOfTheDay);
+        recipeOfTheDay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent testPageOpener = new Intent(ExploreActivity.this, Test.class);
+                startActivity(testPageOpener);
+            }
+        });
     }
     public void onClickBtn(View v)
     {

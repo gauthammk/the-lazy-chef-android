@@ -7,15 +7,15 @@
     android:layout_gravity="center"
     tools:context=".ExploreActivity">
 
-    <!-- Search by ingredients -->
+    <!-- Answers -->
     <TextView
-        android:id="@+id/nutritionQAHeading"
+        android:id="@+id/nutritionQAAnswers"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="215dp"
         android:gravity="center_horizontal|center_vertical"
         android:lineHeight="44sp"
-        android:text="@string/nutrition_qa"
+        android:text="@string/answers"
         android:textAppearance="@style/heading"
         android:translationZ="1dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
@@ -23,19 +23,19 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:targetApi="p" />
 
-    <!-- Subheading -->
+    <!-- Results -->
     <TextView
-        android:id="@+id/nutritionQASubheading"
+        android:id="@+id/nutritionQAResults"
         android:layout_width="330dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="35dp"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/nutrition_qa_subheading"
+        android:text="@string/loading"
         android:textAppearance="@style/subHeading"
         android:translationZ="1dp"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/nutritionQAAnswers"
+        app:layout_constraintStart_toStartOf="@+id/nutritionQAAnswers"
+        app:layout_constraintTop_toTopOf="parent"
         tools:targetApi="lollipop" />
 
     <ImageView
@@ -73,66 +73,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintGuide_percent="0.5"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/clipboardPicture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="141dp"
-        android:background="@drawable/ic_clipboard"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
-        tools:ignore="ContentDescription" />
-
-    <EditText
-        android:id="@+id/askMeAnything"
-        android:layout_width="330dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="274dp"
-        android:autofillHints="comma separated"
-        android:background="@drawable/textbox"
-        android:ems="10"
-        android:fontFamily="@font/montserrat_semibold"
-        android:gravity="center"
-        android:hint="@string/ask_me_anything"
-        android:inputType="textPersonName"
-        android:textColor="@color/darkPurple"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
-        tools:targetApi="jelly_bean" />
-
-    <Button
-        android:id="@+id/goButton"
-        android:layout_width="108dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="411dp"
-        android:background="@drawable/menu_button"
-        android:fontFamily="@font/montserrat_semibold"
-        android:text="@string/go"
-        android:textAllCaps="false"
-        android:textColor="@color/altGreen"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
-        tools:targetApi="jelly_bean" />
-
-    <TextView
-        android:id="@+id/exampleQuestion"
-        android:layout_width="wrap_content"
-        android:layout_height="12dp"
-        android:layout_marginTop="341dp"
-        android:gravity="center"
-        android:text="@string/example_question"
-        android:textAppearance="@style/regularText"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
-        tools:targetApi="jelly_bean" />
 
     <!-- Back button -->
     <ImageView

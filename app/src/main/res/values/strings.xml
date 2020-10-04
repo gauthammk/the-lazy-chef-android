@@ -23,4 +23,12 @@
     <string name="nutrition_qa_subheading">Worried about how many carbs are in your cheat meal? We\’ve got your back.</string>
     <string name="ask_me_anything">Ask me anything</string>
     <string name="example_question">eg. how much protein in chicken</string>
+    <string name="loading">Loading…</string>
+    <string name="test">Test</string>
+    <string name="test_subheading">Testing testing!</string>
+    <string name="answers">Answers</string>
+    <string name="recipes">Recipes</string>
+    <string name="pairings">Pairings</string>
+    <string name="pairings_subheading">Cabernet Sauvignon is a dry red wine which is bold and full bodied. It goes especially well with stew, steak, chili, jjigae, and cholent.</string>
+    <string name="find_recipes_results_subheading">Search results for bean burrito</string>
 </resources>

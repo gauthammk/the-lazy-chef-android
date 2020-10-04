@@ -40,7 +40,7 @@
 
     <style name="regularText">
         <item name="android:textSize">
-            12sp
+            10sp
         </item>
         <item name="android:textColor">
             @color/darkPurple

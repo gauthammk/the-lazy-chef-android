@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WinePairingsResults">
+
+    <TextView
+        android:id="@+id/pairingsHeading"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="215dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:lineHeight="44sp"
+        android:text="@string/pairings"
+        android:textAppearance="@style/heading"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="p" />
+
+    <TextView
+        android:id="@+id/pairingsSubheading"
+        android:layout_width="330dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="83dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/pairings_subheading"
+        android:textAppearance="@style/subHeading"
+        android:translationZ="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/pairingsHeading"
+        app:layout_constraintStart_toStartOf="@+id/pairingsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/pairingsHeading"
+        tools:targetApi="lollipop" />
+
+    <ImageView
+        android:id="@+id/ellipse2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_ellipse_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ellipse3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_ellipse_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ellipse1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_ellipse_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/pairing1"
+        android:layout_width="157dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="262dp"
+        android:background="@drawable/textbox"
+        app:layout_constraintStart_toStartOf="@+id/pairingsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/pairingsHeading"
+        tools:ignore="SmallSp"
+        tools:targetApi="jelly_bean" />
+
+    <RelativeLayout
+        android:id="@+id/pairing2"
+        android:layout_width="157dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="262dp"
+        android:background="@drawable/textbox"
+        app:layout_constraintEnd_toEndOf="@+id/pairingsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/pairingsHeading"
+        tools:ignore="SmallSp"
+        tools:targetApi="jelly_bean">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pairing3"
+        android:layout_width="157dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="376dp"
+        android:background="@drawable/textbox"
+        app:layout_constraintStart_toStartOf="@+id/pairingsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/pairingsHeading"
+        tools:ignore="SmallSp"
+        tools:targetApi="jelly_bean">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pairing4"
+        android:layout_width="157dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="376dp"
+        android:background="@drawable/textbox"
+        app:layout_constraintEnd_toEndOf="@+id/pairingsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/pairingsHeading"
+        tools:ignore="SmallSp"
+        tools:targetApi="jelly_bean">
+
+    </RelativeLayout>
+
+    <!-- Back button -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_back_arrow"
+        tools:ignore="ContentDescription"
+        android:onClick="onClickBtn"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

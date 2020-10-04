@@ -11,9 +11,9 @@
     <TextView
         android:id="@+id/explore"
         android:layout_width="330dp"
-        android:layout_height="99dp"
-        android:layout_marginBottom="187dp"
-        android:gravity="center_horizontal|center_vertical"
+        android:layout_height="44dp"
+        android:layout_marginBottom="215dp"
+        android:gravity="center"
         android:lineHeight="44sp"
         android:text="@string/explore"
         android:textAppearance="@style/heading"
@@ -27,8 +27,8 @@
     <TextView
         android:id="@+id/trivia"
         android:layout_width="330dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="43dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/trivia"
         android:textAppearance="@style/subHeading"
@@ -42,7 +42,7 @@
         android:id="@+id/findRecipes"
         android:layout_width="157dp"
         android:layout_height="97dp"
-        android:layout_marginTop="141dp"
+        android:layout_marginTop="183dp"
         android:background="@drawable/menu_button"
         android:onClick="onClickBtn"
         android:text="@string/find_recipes"
@@ -83,7 +83,7 @@
         android:id="@+id/searchByIngredients"
         android:layout_width="157dp"
         android:layout_height="97dp"
-        android:layout_marginTop="141dp"
+        android:layout_marginTop="183dp"
         android:background="@drawable/menu_button"
         android:onClick="onClickBtn"
         android:text="@string/search_by_ingredients"
@@ -124,7 +124,7 @@
         android:id="@+id/winePairings"
         android:layout_width="157dp"
         android:layout_height="97dp"
-        android:layout_marginTop="255dp"
+        android:layout_marginTop="297dp"
         android:background="@drawable/menu_button"
         android:onClick="onClickBtn"
         android:text="@string/wine_parings"
@@ -166,7 +166,7 @@
         android:id="@+id/nutritionQA"
         android:layout_width="157dp"
         android:layout_height="97dp"
-        android:layout_marginTop="255dp"
+        android:layout_marginTop="297dp"
         android:background="@drawable/menu_button"
         android:onClick="onClickBtn"
         android:orientation="vertical"
@@ -207,8 +207,8 @@
     <Button
         android:id="@+id/recipeOfTheDay"
         android:layout_width="330dp"
-        android:layout_height="81dp"
-        android:layout_marginTop="369dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="411dp"
         android:background="@drawable/menu_button"
         android:fontFamily="@font/montserrat_semibold"
         android:onClick="onClickBtn"
@@ -257,5 +257,19 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/ic_ellipse_1"
         tools:ignore="ContentDescription" />
+
+    <!-- Back button -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_back_arrow"
+        tools:ignore="ContentDescription"
+        android:onClick="onClickBtn"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

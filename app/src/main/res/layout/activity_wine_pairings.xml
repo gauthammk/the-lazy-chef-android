@@ -11,8 +11,8 @@
     <TextView
         android:id="@+id/winePairingsHeading"
         android:layout_width="330dp"
-        android:layout_height="99dp"
-        android:layout_marginBottom="187dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="215dp"
         android:gravity="center_horizontal|center_vertical"
         android:lineHeight="44sp"
         android:text="@string/wine_parings"
@@ -28,7 +28,7 @@
         android:id="@+id/winePairingsSubheading"
         android:layout_width="330dp"
         android:layout_height="97dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="22dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/wine_pairings_subheading"
         android:textAppearance="@style/subHeading"
@@ -78,7 +78,7 @@
         android:id="@+id/winePicture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="113dp"
+        android:layout_marginTop="141dp"
         android:background="@drawable/ic_wine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +89,7 @@
         android:id="@+id/enterWines"
         android:layout_width="330dp"
         android:layout_height="62dp"
-        android:layout_marginTop="246dp"
+        android:layout_marginTop="274dp"
         android:autofillHints="comma separated"
         android:background="@drawable/textbox"
         android:ems="10"
@@ -106,9 +106,9 @@
 
     <Button
         android:id="@+id/goButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="420dp"
+        android:layout_width="108dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="411dp"
         android:background="@drawable/menu_button"
         android:fontFamily="@font/montserrat_semibold"
         android:onClick="onClickBtn"
@@ -123,9 +123,9 @@
 
     <TextView
         android:id="@+id/exampleWines"
-        android:layout_width="330dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="333dp"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:layout_marginTop="341dp"
         android:gravity="center"
         android:text="@string/example_wines"
         android:textAppearance="@style/regularText"
@@ -134,5 +134,18 @@
         app:layout_constraintStart_toStartOf="@+id/winePairingsHeading"
         app:layout_constraintTop_toBottomOf="@+id/winePairingsHeading"
         tools:targetApi="jelly_bean" />
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_back_arrow"
+        tools:ignore="ContentDescription"
+        android:onClick="onClickBtn"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

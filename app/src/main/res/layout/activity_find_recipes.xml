@@ -11,8 +11,8 @@
     <TextView
         android:id="@+id/findRecipesHeading"
         android:layout_width="330dp"
-        android:layout_height="99dp"
-        android:layout_marginBottom="187dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="215dp"
         android:gravity="center_horizontal|center_vertical"
         android:lineHeight="44sp"
         android:text="@string/find_recipes"
@@ -28,7 +28,7 @@
         android:id="@+id/winePairingsSubheading"
         android:layout_width="330dp"
         android:layout_height="47dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="47dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/find_recipes_subheading"
         android:textAppearance="@style/subHeading"
@@ -78,7 +78,7 @@
         android:id="@+id/recipeBookPicture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="113dp"
+        android:layout_marginTop="141dp"
         android:background="@drawable/ic_recipe_book"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +89,7 @@
         android:id="@+id/enterDish"
         android:layout_width="262dp"
         android:layout_height="62dp"
-        android:layout_marginTop="246dp"
+        android:layout_marginTop="274dp"
         android:autofillHints="comma separated"
         android:background="@drawable/textbox"
         android:ems="10"
@@ -107,7 +107,7 @@
         android:id="@+id/advancedSearchButton"
         android:layout_width="249dp"
         android:layout_height="52dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="411dp"
         android:background="@drawable/menu_button"
         android:fontFamily="@font/montserrat_semibold"
         android:onClick="onClickBtn"
@@ -122,15 +122,15 @@
 
     <TextView
         android:id="@+id/exampleDish"
-        android:layout_width="330dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="333dp"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:layout_marginTop="341dp"
         android:gravity="center"
         android:text="@string/example_dish"
         android:textAppearance="@style/regularText"
         android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="@+id/findRecipesHeading"
-        app:layout_constraintStart_toStartOf="@+id/findRecipesHeading"
+        app:layout_constraintEnd_toEndOf="@+id/enterDish"
+        app:layout_constraintStart_toStartOf="@+id/enterDish"
         app:layout_constraintTop_toBottomOf="@+id/findRecipesHeading"
         tools:targetApi="jelly_bean" />
 
@@ -140,12 +140,12 @@
         android:layout_height="62dp"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="246dp"
+        android:layout_marginTop="274dp"
         android:background="@drawable/menu_button"
+        android:onClick="onClickBtn"
         app:layout_constraintEnd_toEndOf="@+id/findRecipesHeading"
         app:layout_constraintStart_toEndOf="@+id/enterDish"
-        app:layout_constraintTop_toBottomOf="@+id/findRecipesHeading"
-        android:onClick="onClickBtn">
+        app:layout_constraintTop_toBottomOf="@+id/findRecipesHeading">
 
         <ImageView
             android:id="@+id/searchPicture"
@@ -155,5 +155,19 @@
             android:background="@drawable/ic_search"
             tools:ignore="ContentDescription" />
     </RelativeLayout>
+
+    <!-- Back button -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_back_arrow"
+        tools:ignore="ContentDescription"
+        android:onClick="onClickBtn"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
