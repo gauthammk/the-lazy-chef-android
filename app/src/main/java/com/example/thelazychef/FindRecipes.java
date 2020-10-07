@@ -55,4 +55,10 @@ public class FindRecipes extends AppCompatActivity {
     {
         Toast.makeText(this, "Functionality not added", Toast.LENGTH_SHORT).show();
     }
+
+    // on click handler for back button
+    public void backButtonClickHandler(View v) {
+        Intent explorePageOpener = new Intent(FindRecipes.this, ExploreActivity.class);
+        startActivity(explorePageOpener);
+    }
 }

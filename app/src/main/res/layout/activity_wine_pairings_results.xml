@@ -133,7 +133,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/ic_back_arrow"
         tools:ignore="ContentDescription"
-        android:onClick="onClickBtn"/>
+        android:onClick="backButtonClickHandler"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

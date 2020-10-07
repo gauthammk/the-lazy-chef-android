@@ -2,6 +2,7 @@ package com.example.thelazychef;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -26,6 +27,8 @@ public class NutritionQAResults extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // hide action bar
         try
         {
             this.getSupportActionBar().hide();
@@ -45,7 +48,7 @@ public class NutritionQAResults extends AppCompatActivity {
         OkHttpClient client = new OkHttpClient();
 
         // define the API endpoint
-        String endpoint = "https://api.spoonacular.com/recipes/quickAnswer?q=how much sugar in an apple&apiKey=fc6fef8c0bb04e27ad8da3843fef1602";
+        String endpoint = "https://api.spoonacular.com/recipes/quickAnswer?q=" + nutritionQuery + "&apiKey=fc6fef8c0bb04e27ad8da3843fef1602";
 
         // build a request object
         Request request = new Request.Builder()
@@ -67,11 +70,16 @@ public class NutritionQAResults extends AppCompatActivity {
                         @Override
                         public void run() {
                             try {
+
+                                // parse json response
                                 JSONObject json = new JSONObject(myResponse);
                                 String finalResponse = json.getString("answer");
                                 nutritionQAResults.setText(finalResponse);
                                 System.out.println("RESPONSE for " + nutritionQuery + ": \n" + finalResponse);
                             } catch (JSONException e) {
+
+                                // answer was not received from the API, display error to the user
+                                nutritionQAResults.setText("Oops! That did not work :( \n Please try rephrasing your query.");
                                 e.printStackTrace();
                             }
                         }
@@ -82,8 +90,14 @@ public class NutritionQAResults extends AppCompatActivity {
 
     }
 
-    public void onClickBtn(View v)
+    public void displayFunctionalityNotAdded(View v)
     {
         Toast.makeText(this, "Functionality not added", Toast.LENGTH_SHORT).show();
+    }
+
+    // on click handler for back button
+    public void backButtonClickHandler(View v) {
+        Intent nutritionQAPageOpener = new Intent(NutritionQAResults.this, NutritionQA.class);
+        startActivity(nutritionQAPageOpener);
     }
 }

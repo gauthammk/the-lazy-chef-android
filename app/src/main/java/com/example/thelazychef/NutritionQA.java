@@ -17,6 +17,8 @@ public class NutritionQA extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // hide action bar
         try
         {
             this.getSupportActionBar().hide();
@@ -37,11 +39,11 @@ public class NutritionQA extends AppCompatActivity {
                 // check if query is valid
                 String nutritionQuery = askMeAnything.getText().toString().trim();
                 if (nutritionQuery.length() > 0){
-                    Intent nutritionQAResultsOpener = new Intent(NutritionQA.this, NutritionQAResults.class);
+                    Intent nutritionQAResultsPageOpener = new Intent(NutritionQA.this, NutritionQAResults.class);
 
                     // pass the nutrition query to the results page
-                    nutritionQAResultsOpener.putExtra("NUTRITION_QUERY", nutritionQuery);
-                    startActivity(nutritionQAResultsOpener);
+                    nutritionQAResultsPageOpener.putExtra("NUTRITION_QUERY", nutritionQuery);
+                    startActivity(nutritionQAResultsPageOpener);
                 } else {
                     Toast.makeText(getApplicationContext(), "Please enter a valid query!", Toast.LENGTH_SHORT).show();
                 }
@@ -52,5 +54,11 @@ public class NutritionQA extends AppCompatActivity {
     public void onClickBtn(View v)
     {
         Toast.makeText(this, "Functionality not added", Toast.LENGTH_SHORT).show();
+    }
+
+    // on click handler for back button
+    public void backButtonClickHandler(View v) {
+        Intent explorePageOpener = new Intent(NutritionQA.this, ExploreActivity.class);
+        startActivity(explorePageOpener);
     }
 }

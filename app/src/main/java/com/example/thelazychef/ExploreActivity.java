@@ -28,8 +28,8 @@ public class ExploreActivity extends AppCompatActivity {
         findRecipes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent explorePageOpener = new Intent(ExploreActivity.this, FindRecipes.class);
-                startActivity(explorePageOpener);
+                Intent findRecipesPageOpener = new Intent(ExploreActivity.this, FindRecipes.class);
+                startActivity(findRecipesPageOpener);
             }
         });
 
@@ -38,8 +38,8 @@ public class ExploreActivity extends AppCompatActivity {
         searchByIngredients.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent explorePageOpener = new Intent(ExploreActivity.this, SearchByIngredients.class);
-                startActivity(explorePageOpener);
+                Intent searchByIngredientsPageOpener = new Intent(ExploreActivity.this, SearchByIngredients.class);
+                startActivity(searchByIngredientsPageOpener);
             }
         });
 
@@ -48,8 +48,8 @@ public class ExploreActivity extends AppCompatActivity {
         winePairings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent explorePageOpener = new Intent(ExploreActivity.this, WinePairings.class);
-                startActivity(explorePageOpener);
+                Intent winePairingsPageOpener = new Intent(ExploreActivity.this, WinePairings.class);
+                startActivity(winePairingsPageOpener);
             }
         });
 
@@ -58,8 +58,8 @@ public class ExploreActivity extends AppCompatActivity {
         nutritionQA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent explorePageOpener = new Intent(ExploreActivity.this, NutritionQA.class);
-                startActivity(explorePageOpener);
+                Intent nutritionQAPageOpener = new Intent(ExploreActivity.this, NutritionQA.class);
+                startActivity(nutritionQAPageOpener);
             }
         });
 
@@ -75,5 +75,11 @@ public class ExploreActivity extends AppCompatActivity {
     public void onClickBtn(View v)
     {
         Toast.makeText(this, "Functionality not added", Toast.LENGTH_SHORT).show();
+    }
+
+    // on click handler for back button
+    public void backButtonClickHandler(View v) {
+        Intent mainActivityPageOpener = new Intent(ExploreActivity.this, MainActivity.class);
+        startActivity(mainActivityPageOpener);
     }
 }

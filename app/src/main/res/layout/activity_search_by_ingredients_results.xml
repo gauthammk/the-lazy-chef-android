@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".FindRecipesResults">
+    tools:context=".SearchByIngredientsResults">
 
     <TextView
         android:id="@+id/findRecipesResultsHeading"
@@ -152,7 +152,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/ic_back_arrow"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        android:onClick="backButtonClickHandler"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

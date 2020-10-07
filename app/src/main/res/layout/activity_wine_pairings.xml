@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".ExploreActivity">
+    tools:context=".WinePairings">
 
     <!-- Search by ingredients -->
     <TextView
@@ -146,6 +146,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/ic_back_arrow"
         tools:ignore="ContentDescription"
-        android:onClick="onClickBtn"/>
+        android:onClick="backButtonClickHandlero"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
