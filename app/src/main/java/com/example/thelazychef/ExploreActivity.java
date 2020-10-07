@@ -14,6 +14,8 @@ public class ExploreActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // hide action bar
         try
         {
             this.getSupportActionBar().hide();

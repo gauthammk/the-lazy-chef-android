@@ -26,9 +26,11 @@
     <string name="loading">Loading…</string>
     <string name="test">Test</string>
     <string name="test_subheading">Testing testing!</string>
-    <string name="answers">Answers</string>
+    <string name="results">Results</string>
     <string name="recipes">Recipes</string>
     <string name="pairings">Pairings</string>
     <string name="pairings_subheading">Cabernet Sauvignon is a dry red wine which is bold and full bodied. It goes especially well with stew, steak, chili, jjigae, and cholent.</string>
     <string name="find_recipes_results_subheading">Search results for bean burrito</string>
+    <string name="http404">HTTP 404 :(</string>
+    <string name="internet_error">Oops!\n It looks like you aren’t connected to the internet at the moment. Please stay connected for a hassle free experience.</string>
 </resources>

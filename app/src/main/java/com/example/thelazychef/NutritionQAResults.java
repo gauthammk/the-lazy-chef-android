@@ -59,6 +59,10 @@ public class NutritionQAResults extends AppCompatActivity {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
+
+                // display network error page on request failure
+                Intent networkErrorPageOpener = new Intent(NutritionQAResults.this, NetworkError.class);
+                startActivity(networkErrorPageOpener);
                 e.printStackTrace();
             }
 
@@ -84,6 +88,8 @@ public class NutritionQAResults extends AppCompatActivity {
                             }
                         }
                     });
+                } else {
+                    nutritionQAResults.setText("Please contact the administrator.");
                 }
             }
         });

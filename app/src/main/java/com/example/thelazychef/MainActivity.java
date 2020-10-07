@@ -2,7 +2,10 @@ package com.example.thelazychef;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,9 +30,32 @@ public class MainActivity extends AppCompatActivity {
         getStartedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent explorePageOpener = new Intent(MainActivity.this, ExploreActivity.class);
-                startActivity(explorePageOpener);
+
+                // check for internet connectivity
+                if (isNetworkConnectionAvailable()) {
+                    Intent explorePageOpener = new Intent(MainActivity.this, ExploreActivity.class);
+                    startActivity(explorePageOpener);
+                } else {
+
+                    // display network error page if network connection is not available
+                    Intent networkErrorPageOpener = new Intent(MainActivity.this, NetworkError.class);
+                    startActivity(networkErrorPageOpener);
+                }
+
             }
         });
+    }
+
+    public boolean isNetworkConnectionAvailable () {
+        boolean connected = false;
+        ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        try {
+            connected = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+                    connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return connected;
     }
 }
