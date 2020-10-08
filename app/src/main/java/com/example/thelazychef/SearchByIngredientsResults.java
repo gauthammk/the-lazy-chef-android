@@ -31,7 +31,6 @@ public class SearchByIngredientsResults extends AppCompatActivity {
 
     // on click handler for back button
     public void backButtonClickHandler(View v) {
-        Intent searchByIngredientsPageOpener = new Intent(SearchByIngredientsResults.this, SearchByIngredients.class);
-        startActivity(searchByIngredientsPageOpener);
+        finish();
     }
 }

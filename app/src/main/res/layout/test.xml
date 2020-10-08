@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".ExploreActivity">
+    tools:context=".Test">
 
     <!-- Search by ingredients -->
     <TextView
@@ -91,6 +91,19 @@
         app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
         app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
         tools:targetApi="jelly_bean" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="148dp"
+        app:SpinKit_Color="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

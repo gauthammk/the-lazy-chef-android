@@ -25,7 +25,6 @@ public class NetworkError extends AppCompatActivity {
 
     // on click handler for back button
     public void backButtonClickHandler(View v) {
-        Intent mainActivityPageOpener = new Intent(NetworkError.this, MainActivity.class);
-        startActivity(mainActivityPageOpener);
+        finish();
     }
 }

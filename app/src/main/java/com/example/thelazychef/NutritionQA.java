@@ -58,7 +58,6 @@ public class NutritionQA extends AppCompatActivity {
 
     // on click handler for back button
     public void backButtonClickHandler(View v) {
-        Intent explorePageOpener = new Intent(NutritionQA.this, ExploreActivity.class);
-        startActivity(explorePageOpener);
+        finish();
     }
 }

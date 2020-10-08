@@ -81,7 +81,6 @@ public class ExploreActivity extends AppCompatActivity {
 
     // on click handler for back button
     public void backButtonClickHandler(View v) {
-        Intent mainActivityPageOpener = new Intent(ExploreActivity.this, MainActivity.class);
-        startActivity(mainActivityPageOpener);
+        finish();
     }
 }

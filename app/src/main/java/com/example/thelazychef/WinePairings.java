@@ -58,7 +58,6 @@ public class WinePairings extends AppCompatActivity {
 
     // on click handler for back button
     public void backButtonClickHandler(View v) {
-        Intent explorePageOpener = new Intent(WinePairings.this, ExploreActivity.class);
-        startActivity(explorePageOpener);
+        finish();
     }
 }

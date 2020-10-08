@@ -58,7 +58,6 @@ public class FindRecipes extends AppCompatActivity {
 
     // on click handler for back button
     public void backButtonClickHandler(View v) {
-        Intent explorePageOpener = new Intent(FindRecipes.this, ExploreActivity.class);
-        startActivity(explorePageOpener);
+        finish();
     }
 }

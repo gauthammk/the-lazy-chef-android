@@ -1,8 +1,10 @@
 package com.example.thelazychef;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -13,6 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -66,20 +69,21 @@ public class NutritionQAResults extends AppCompatActivity {
                 e.printStackTrace();
             }
 
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+            public void onResponse(@NotNull Call call, @NotNull final Response response) throws IOException {
                 if (response.isSuccessful()) {
-                    final String myResponse = response.body().string();
+                    final String myResponse = Objects.requireNonNull(response.body()).string();
                     NutritionQAResults.this.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             try {
 
+                                System.out.println("DEBUG RESPONSE: " + myResponse);
                                 // parse json response
                                 JSONObject json = new JSONObject(myResponse);
                                 String finalResponse = json.getString("answer");
                                 nutritionQAResults.setText(finalResponse);
-                                System.out.println("RESPONSE for " + nutritionQuery + ": \n" + finalResponse);
                             } catch (JSONException e) {
 
                                 // answer was not received from the API, display error to the user
@@ -89,7 +93,7 @@ public class NutritionQAResults extends AppCompatActivity {
                         }
                     });
                 } else {
-                    nutritionQAResults.setText("Please contact the administrator.");
+                    nutritionQAResults.setText("An unkown error occurred. Please contact the administrator.");
                 }
             }
         });
@@ -103,7 +107,6 @@ public class NutritionQAResults extends AppCompatActivity {
 
     // on click handler for back button
     public void backButtonClickHandler(View v) {
-        Intent nutritionQAPageOpener = new Intent(NutritionQAResults.this, NutritionQA.class);
-        startActivity(nutritionQAPageOpener);
+        finish();
     }
 }
