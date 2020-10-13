@@ -24,6 +24,12 @@
 - Illustrations from [unDraw](https://undraw.co)
 - Icons from [Font Awesome](https://fontawesome.com) and [flaticon](https://www.flaticon.com)
 
+## UI Kit
+
+<p align="start">
+  <img src="UI_Kit.png" width="20%" style="margin-right: 5%;">
+</p>
+
 ## Web App
 
 Check out the web version here! : https://gauthammk.github.io/the-lazy-chef/
