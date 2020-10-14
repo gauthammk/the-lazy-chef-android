@@ -11,7 +11,7 @@
     <TextView
         android:id="@+id/findRecipesHeading"
         android:layout_width="330dp"
-        android:layout_height="44dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="215dp"
         android:gravity="center_horizontal|center_vertical"
         android:lineHeight="44sp"
@@ -105,8 +105,8 @@
 
     <Button
         android:id="@+id/advancedSearchButton"
-        android:layout_width="249dp"
-        android:layout_height="52dp"
+        android:layout_width="233dp"
+        android:layout_height="62dp"
         android:layout_marginTop="411dp"
         android:background="@drawable/menu_button"
         android:fontFamily="@font/montserrat_semibold"
@@ -123,7 +123,7 @@
     <TextView
         android:id="@+id/exampleDish"
         android:layout_width="wrap_content"
-        android:layout_height="12dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="341dp"
         android:gravity="center"
         android:text="@string/example_dish"

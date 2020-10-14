@@ -11,15 +11,6 @@ public class NetworkError extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // hide action bar
-        try
-        {
-            this.getSupportActionBar().hide();
-        }
-        catch (NullPointerException e){
-            System.out.println("Textbox could not be concealed.");
-        }
         setContentView(R.layout.activity_network_error);
     }
 

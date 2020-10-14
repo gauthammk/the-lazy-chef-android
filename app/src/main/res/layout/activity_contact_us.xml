@@ -4,39 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    tools:context=".NutritionQA">
+    tools:context=".ContactUs">
 
-    <!-- Search by ingredients -->
+    <!-- Contact Us -->
     <TextView
-        android:id="@+id/nutritionQAHeading"
+        android:id="@+id/contactUsHeading"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="215dp"
         android:gravity="center_horizontal|center_vertical"
         android:lineHeight="44sp"
-        android:text="@string/nutrition_qa"
+        android:text="@string/contact_us"
         android:textAppearance="@style/heading"
         android:translationZ="1dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:targetApi="p" />
-
-    <!-- Subheading -->
-    <TextView
-        android:id="@+id/nutritionQASubheading"
-        android:layout_width="330dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="35dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/nutrition_qa_subheading"
-        android:textAppearance="@style/subHeading"
-        android:translationZ="1dp"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
-        tools:targetApi="lollipop" />
 
     <ImageView
         android:id="@+id/ellipse2"
@@ -75,66 +59,74 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/clipboardPicture"
+        android:id="@+id/githubButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="141dp"
-        android:background="@drawable/ic_clipboard"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
+        android:layout_marginTop="77dp"
+        android:background="@drawable/ic_github"
+        app:layout_constraintEnd_toEndOf="@+id/contactUsHeading"
+        app:layout_constraintStart_toStartOf="@+id/contactUsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/contactUsHeading"
         tools:ignore="ContentDescription" />
 
-    <EditText
-        android:id="@+id/askMeAnything"
-        android:layout_width="330dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="274dp"
-        android:autofillHints="comma separated"
-        android:background="@drawable/textbox"
-        android:ems="10"
-        android:fontFamily="@font/montserrat_semibold"
-        android:gravity="center"
-        android:hint="@string/ask_me_anything"
-        android:inputType="textPersonName"
-        android:textColor="@color/darkPurple"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
-        tools:targetApi="jelly_bean" />
-
-    <Button
-        android:id="@+id/goButton"
-        android:layout_width="108dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="411dp"
-        android:background="@drawable/menu_button"
-        android:fontFamily="@font/montserrat_semibold"
-        android:text="@string/go"
-        android:textAllCaps="false"
-        android:textColor="@color/altGreen"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
-        tools:targetApi="jelly_bean" />
-
     <TextView
-        android:id="@+id/exampleQuestion"
+        android:id="@+id/githubText"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="131dp"
+        android:text="@string/github_text"
+        android:textAppearance="@style/subHeading"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/contactUsHeading"
+        app:layout_constraintStart_toStartOf="@+id/contactUsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/contactUsHeading" />
+
+    <ImageView
+        android:id="@+id/mailButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="341dp"
-        android:gravity="center"
-        android:text="@string/example_question"
-        android:textAppearance="@style/regularText"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
-        tools:targetApi="jelly_bean" />
+        android:layout_marginTop="238dp"
+        android:background="@drawable/ic_envelope"
+        app:layout_constraintEnd_toEndOf="@+id/contactUsHeading"
+        app:layout_constraintStart_toStartOf="@+id/contactUsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/contactUsHeading"
+        tools:ignore="ContentDescription" />
 
-    <!-- Back button -->
+    <TextView
+        android:id="@+id/mailText"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="291dp"
+        android:text="@string/mail_text"
+        android:textAppearance="@style/subHeading"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/contactUsHeading"
+        app:layout_constraintStart_toStartOf="@+id/contactUsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/contactUsHeading" />
+
+    <ImageView
+        android:id="@+id/twitterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="376dp"
+        android:background="@drawable/ic_twitter"
+        app:layout_constraintEnd_toEndOf="@+id/contactUsHeading"
+        app:layout_constraintStart_toStartOf="@+id/contactUsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/contactUsHeading"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/twitterText"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="429dp"
+        android:text="@string/twitter_text"
+        android:textAppearance="@style/subHeading"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/contactUsHeading"
+        app:layout_constraintStart_toStartOf="@+id/contactUsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/contactUsHeading" />
+
     <ImageView
         android:id="@+id/backButton"
         android:layout_width="wrap_content"

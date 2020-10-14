@@ -4,29 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    Button getStartedButton;
+    ImageView contactUsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        try
-        {
-            this.getSupportActionBar().hide();
-        }
-        catch (NullPointerException e){
-            System.out.println("Textbox could not be concealed.");
-        }
         setContentView(R.layout.activity_main);
 
         // going to explore screen
-        Button getStartedButton = findViewById(R.id.getStartedButton);
+        getStartedButton = findViewById(R.id.getStartedButton);
         getStartedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +39,16 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(networkErrorPageOpener);
                 }
 
+            }
+        });
+
+        // going to contacts screen
+        contactUsButton = findViewById(R.id.contactUsButton);
+        contactUsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent contactUsPageOpener = new Intent(MainActivity.this, ContactUs.class);
+                startActivity(contactUsPageOpener);
             }
         });
     }

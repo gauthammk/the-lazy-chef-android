@@ -10,6 +10,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 public class FindRecipes extends AppCompatActivity {
 
     RelativeLayout searchButton;
@@ -18,13 +21,6 @@ public class FindRecipes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        try
-        {
-            this.getSupportActionBar().hide();
-        }
-        catch (NullPointerException e){
-            System.out.println("Textbox could not be concealed.");
-        }
         setContentView(R.layout.activity_find_recipes);
 
         // initialise text view
@@ -45,6 +41,12 @@ public class FindRecipes extends AppCompatActivity {
                     findRecipesResultsOpener.putExtra("DISH_QUERY", dishQuery);
                     startActivity(findRecipesResultsOpener);
                 } else {
+
+                    // shake box
+                    YoYo.with(Techniques.Shake)
+                            .duration(700)
+                            .repeat(0)
+                            .playOn(findViewById(R.id.enterDish));
                     Toast.makeText(getApplicationContext(), "Please enter a valid query!", Toast.LENGTH_SHORT).show();
                 }
             }

@@ -11,7 +11,7 @@
     <TextView
         android:id="@+id/winePairingsHeading"
         android:layout_width="330dp"
-        android:layout_height="44dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="215dp"
         android:gravity="center_horizontal|center_vertical"
         android:lineHeight="44sp"
@@ -124,7 +124,7 @@
     <TextView
         android:id="@+id/exampleWines"
         android:layout_width="wrap_content"
-        android:layout_height="12dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="341dp"
         android:gravity="center"
         android:text="@string/example_wines"
@@ -135,6 +135,7 @@
         app:layout_constraintTop_toBottomOf="@+id/winePairingsHeading"
         tools:targetApi="jelly_bean" />
 
+    <!-- Back button -->
     <ImageView
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
@@ -146,6 +147,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/ic_back_arrow"
         tools:ignore="ContentDescription"
-        android:onClick="backButtonClickHandlero"/>
+        android:onClick="backButtonClickHandler"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

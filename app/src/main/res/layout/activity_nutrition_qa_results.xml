@@ -29,7 +29,6 @@
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/loading"
         android:textAppearance="@style/subHeading"
         android:translationZ="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -87,5 +86,18 @@
         android:background="@drawable/ic_back_arrow"
         tools:ignore="ContentDescription"
         android:onClick="backButtonClickHandler"/>
+
+    <!-- Loading animation -->
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/loader1"
+        style="@style/SpinKitView.ThreeBounce"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/darkPurple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

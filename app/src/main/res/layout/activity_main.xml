@@ -7,10 +7,6 @@
     android:layout_gravity="center"
     tools:context=".MainActivity">
 
-    <!-- Main Heading -->
-
-    <!-- Subheading -->
-
     <TextView
         android:id="@+id/mainHeading"
         android:layout_width="wrap_content"
@@ -24,10 +20,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:targetApi="jelly_bean" />
-
-    <!-- Undraw Hamburger-->
-
-    <!-- Get Started Button -->
 
     <TextView
         android:id="@+id/subHeading"
@@ -78,5 +70,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/contactUsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/ic_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

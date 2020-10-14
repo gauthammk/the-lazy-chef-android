@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -21,6 +25,7 @@ import okhttp3.Response;
 
 public class Test extends AppCompatActivity {
 
+    ProgressBar loader;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,49 +37,19 @@ public class Test extends AppCompatActivity {
             System.out.println("Textbox could not be concealed.");
         }
         setContentView(R.layout.test);
-        System.out.println("ATTEMPTING API CALL!");
-        final TextView result = findViewById(R.id.result);
-
-        // make http call
-        OkHttpClient client = new OkHttpClient();
-        String url = "https://www.foaas.com/programmer/GMK";
-        Request request = new Request.Builder()
-                .url(url)
-                .header("Accept", "application/json")
-                .build();
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                e.printStackTrace();
-            }
-
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                if (response.isSuccessful()) {
-                    final String myResponse = response.body().string();
-                    Test.this.runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                JSONObject json = new JSONObject(myResponse);
-                                String message = json.getString("message");
-                                String subtitle = json.getString("subtitle");
-                                String finalResponse = message + subtitle;
-                                result.setText(finalResponse);
-                                System.out.println("RESPONSE: \n" + finalResponse);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    });
-                }
-            }
-        });
-
+        YoYo.with(Techniques.Shake)
+                .duration(700)
+                .repeat(5)
+                .playOn(findViewById(R.id.testSubheading));
     }
 
     public void onClickBtn(View v)
     {
         Toast.makeText(this, "Functionality not added", Toast.LENGTH_SHORT).show();
+    }
+
+    public void hideLoader(View v) {
+        loader = findViewById(R.id.spin_kit);
+        loader.setVisibility(View.GONE);
     }
 }

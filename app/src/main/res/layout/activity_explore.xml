@@ -11,7 +11,7 @@
     <TextView
         android:id="@+id/explore"
         android:layout_width="330dp"
-        android:layout_height="44dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="215dp"
         android:gravity="center"
         android:lineHeight="44sp"
@@ -27,17 +27,31 @@
     <TextView
         android:id="@+id/trivia"
         android:layout_width="330dp"
-        android:layout_height="96dp"
+        android:layout_height="wrap_content"
+        android:minHeight="96dp"
         android:layout_marginTop="43dp"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/trivia"
         android:textAppearance="@style/subHeading"
         app:layout_constraintEnd_toEndOf="@+id/explore"
         app:layout_constraintStart_toStartOf="@+id/explore"
-        app:layout_constraintTop_toBottomOf="@+id/explore" />
+        app:layout_constraintTop_toBottomOf="@+id/explore"
+        android:translationZ="1dp"
+        tools:targetApi="lollipop" />
 
 
     <!-- Menu -->
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/triviaLoader"
+        style="@style/SpinKitView.ThreeBounce"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/darkPurple"
+        app:layout_constraintBottom_toBottomOf="@+id/trivia"
+        app:layout_constraintEnd_toEndOf="@+id/trivia"
+        app:layout_constraintStart_toStartOf="@+id/trivia"
+        app:layout_constraintTop_toTopOf="@+id/trivia" />
+
     <RelativeLayout
         android:id="@+id/findRecipes"
         android:layout_width="157dp"

@@ -9,7 +9,7 @@
 
     <!-- Search by ingredients -->
     <TextView
-        android:id="@+id/nutritionQAHeading"
+        android:id="@+id/test"
         android:layout_width="330dp"
         android:layout_height="99dp"
         android:layout_marginBottom="187dp"
@@ -25,7 +25,7 @@
 
     <!-- Subheading -->
     <TextView
-        android:id="@+id/nutritionQASubheading"
+        android:id="@+id/testSubheading"
         android:layout_width="330dp"
         android:layout_height="71dp"
         android:layout_marginTop="21dp"
@@ -33,9 +33,9 @@
         android:text="@string/test_subheading"
         android:textAppearance="@style/subHeading"
         android:translationZ="1dp"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
+        app:layout_constraintEnd_toEndOf="@+id/test"
+        app:layout_constraintStart_toStartOf="@+id/test"
+        app:layout_constraintTop_toBottomOf="@+id/test"
         tools:targetApi="lollipop" />
 
     <ImageView
@@ -86,24 +86,27 @@
         android:gravity="center"
         android:textColor="@color/darkPurple"
         android:textSize="18sp"
-        android:text="@string/loading"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAHeading"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAHeading"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading"
-        tools:targetApi="jelly_bean" />
+        android:text="@string/hide_loader"
+        app:layout_constraintEnd_toEndOf="@+id/test"
+        app:layout_constraintStart_toStartOf="@+id/test"
+        app:layout_constraintTop_toBottomOf="@+id/test"
+        tools:targetApi="jelly_bean"
+        android:onClick="hideLoader"/>
 
+
+    <!-- Loading animation -->
     <com.github.ybq.android.spinkit.SpinKitView
         android:id="@+id/spin_kit"
-        style="@style/SpinKitView.Large.Circle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/SpinKitView.ThreeBounce"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_gravity="center"
         android:layout_marginTop="148dp"
-        app:SpinKit_Color="@color/colorAccent"
+        app:SpinKit_Color="@color/darkPurple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionQAHeading" />
+        app:layout_constraintTop_toBottomOf="@+id/test" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

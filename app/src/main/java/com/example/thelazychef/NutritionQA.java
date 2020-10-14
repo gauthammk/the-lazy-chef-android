@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 public class NutritionQA extends AppCompatActivity {
 
     Button goButton;
@@ -17,15 +20,6 @@ public class NutritionQA extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // hide action bar
-        try
-        {
-            this.getSupportActionBar().hide();
-        }
-        catch (NullPointerException e){
-            System.out.println("Textbox could not be concealed.");
-        }
         setContentView(R.layout.activity_nutrition_qa);
 
         askMeAnything = findViewById(R.id.askMeAnything);
@@ -45,6 +39,12 @@ public class NutritionQA extends AppCompatActivity {
                     nutritionQAResultsPageOpener.putExtra("NUTRITION_QUERY", nutritionQuery);
                     startActivity(nutritionQAResultsPageOpener);
                 } else {
+
+                    // shake box
+                    YoYo.with(Techniques.Shake)
+                            .duration(700)
+                            .repeat(0)
+                            .playOn(findViewById(R.id.askMeAnything));
                     Toast.makeText(getApplicationContext(), "Please enter a valid query!", Toast.LENGTH_SHORT).show();
                 }
             }

@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 public class WinePairings extends AppCompatActivity {
 
     Button goButton;
@@ -17,13 +20,6 @@ public class WinePairings extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        try
-        {
-            this.getSupportActionBar().hide();
-        }
-        catch (NullPointerException e){
-            System.out.println("Textbox could not be concealed.");
-        }
         setContentView(R.layout.activity_wine_pairings);
 
         // initialise text view
@@ -44,6 +40,12 @@ public class WinePairings extends AppCompatActivity {
                     winePairingsResultsOpener.putExtra("WINE_QUERY", wineQuery);
                     startActivity(winePairingsResultsOpener);
                 } else {
+
+                    // shake box
+                    YoYo.with(Techniques.Shake)
+                            .duration(700)
+                            .repeat(0)
+                            .playOn(findViewById(R.id.enterWines));
                     Toast.makeText(getApplicationContext(), "Please enter a valid query!", Toast.LENGTH_SHORT).show();
                 }
             }

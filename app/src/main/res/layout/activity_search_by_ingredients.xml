@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/searchByIngredientsHeading"
         android:layout_width="330dp"
-        android:layout_height="99dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="187dp"
         android:gravity="center_horizontal|center_vertical"
         android:lineHeight="44sp"
@@ -123,7 +123,7 @@
     <TextView
         android:id="@+id/exampleIngredients"
         android:layout_width="wrap_content"
-        android:layout_height="12dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="313dp"
         android:gravity="center"
         android:text="@string/example_ingredients"
@@ -134,6 +134,7 @@
         app:layout_constraintTop_toBottomOf="@+id/searchByIngredientsHeading"
         tools:targetApi="jelly_bean" />
 
+    <!-- Back button -->
     <ImageView
         android:id="@+id/backButton"
         android:layout_width="wrap_content"

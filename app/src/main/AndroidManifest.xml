@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NetworkError"></activity>
+        <activity android:name=".ContactUs"></activity>
+        <activity android:name=".NetworkError" />
         <activity android:name=".SearchByIngredientsResults" />
         <activity android:name=".WinePairingsResults" />
         <activity android:name=".FindRecipesResults" />
