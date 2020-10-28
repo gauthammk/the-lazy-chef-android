@@ -36,12 +36,12 @@ public class WinePairings extends AppCompatActivity {
                 if (wineQuery.length() > 0){
                     Intent winePairingsResultsOpener = new Intent(WinePairings.this, WinePairingsResults.class);
 
-                    // pass the nutrition query to the results page
+                    // pass the wine query to the results page
                     winePairingsResultsOpener.putExtra("WINE_QUERY", wineQuery);
                     startActivity(winePairingsResultsOpener);
                 } else {
 
-                    // shake box
+                    // shake box if no query is entered
                     YoYo.with(Techniques.Shake)
                             .duration(700)
                             .repeat(0)

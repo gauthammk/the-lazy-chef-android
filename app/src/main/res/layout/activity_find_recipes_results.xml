@@ -29,7 +29,6 @@
         android:layout_height="47dp"
         android:layout_marginTop="51dp"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/find_recipes_results_subheading"
         android:textAppearance="@style/subHeading"
         android:translationZ="1dp"
         app:layout_constraintEnd_toEndOf="@+id/findRecipesResultsHeading"
@@ -66,8 +65,8 @@
         app:layout_constraintGuide_percent="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout1"
+    <TextView
+        android:id="@+id/recipeResult1"
         android:layout_width="157dp"
         android:layout_height="97dp"
         android:layout_marginTop="148dp"
@@ -75,10 +74,15 @@
         app:layout_constraintStart_toStartOf="@+id/findRecipesResultsHeading"
         app:layout_constraintTop_toBottomOf="@+id/findRecipesResultsHeading"
         tools:ignore="SmallSp"
-        tools:targetApi="jelly_bean" />
+        tools:targetApi="jelly_bean"
+        android:visibility="invisible"
+        android:textAppearance="@style/regularText"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="15dp"/>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
+    <TextView
+        android:id="@+id/recipeResult2"
         android:layout_width="157dp"
         android:layout_height="97dp"
         android:layout_marginTop="148dp"
@@ -86,10 +90,15 @@
         app:layout_constraintEnd_toEndOf="@+id/findRecipesResultsHeading"
         app:layout_constraintTop_toBottomOf="@+id/findRecipesResultsHeading"
         tools:ignore="SmallSp"
-        tools:targetApi="jelly_bean" />
+        tools:targetApi="jelly_bean"
+        android:visibility="invisible"
+        android:textAppearance="@style/regularText"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="15dp"/>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout3"
+    <TextView
+        android:id="@+id/recipeResult3"
         android:layout_width="157dp"
         android:layout_height="97dp"
         android:layout_marginTop="262dp"
@@ -97,10 +106,15 @@
         app:layout_constraintStart_toStartOf="@+id/findRecipesResultsHeading"
         app:layout_constraintTop_toBottomOf="@+id/findRecipesResultsHeading"
         tools:ignore="SmallSp"
-        tools:targetApi="jelly_bean" />
+        tools:targetApi="jelly_bean"
+        android:visibility="invisible"
+        android:textAppearance="@style/regularText"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="15dp" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout4"
+    <TextView
+        android:id="@+id/recipeResult4"
         android:layout_width="157dp"
         android:layout_height="97dp"
         android:layout_marginTop="262dp"
@@ -108,10 +122,15 @@
         app:layout_constraintEnd_toEndOf="@+id/findRecipesResultsHeading"
         app:layout_constraintTop_toBottomOf="@+id/findRecipesResultsHeading"
         tools:ignore="SmallSp"
-        tools:targetApi="jelly_bean" />
+        tools:targetApi="jelly_bean"
+        android:visibility="invisible"
+        android:textAppearance="@style/regularText"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="15dp" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout5"
+    <TextView
+        android:id="@+id/recipeResult5"
         android:layout_width="157dp"
         android:layout_height="97dp"
         android:layout_marginTop="376dp"
@@ -119,10 +138,15 @@
         app:layout_constraintStart_toStartOf="@+id/findRecipesResultsHeading"
         app:layout_constraintTop_toBottomOf="@+id/findRecipesResultsHeading"
         tools:ignore="SmallSp"
-        tools:targetApi="jelly_bean" />
+        tools:targetApi="jelly_bean"
+        android:visibility="invisible"
+        android:textAppearance="@style/regularText"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="15dp" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout6"
+    <TextView
+        android:id="@+id/recipeResult6"
         android:layout_width="157dp"
         android:layout_height="97dp"
         android:layout_marginTop="376dp"
@@ -130,7 +154,12 @@
         app:layout_constraintEnd_toEndOf="@+id/findRecipesResultsHeading"
         app:layout_constraintTop_toBottomOf="@+id/findRecipesResultsHeading"
         tools:ignore="SmallSp"
-        tools:targetApi="jelly_bean" />
+        tools:targetApi="jelly_bean"
+        android:visibility="invisible"
+        android:textAppearance="@style/regularText"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="15dp" />
 
     <ImageView
         android:id="@+id/ellipse1"
@@ -154,6 +183,19 @@
         android:background="@drawable/ic_back_arrow"
         tools:ignore="ContentDescription"
         android:onClick="backButtonClickHandler"/>
+
+    <!-- Loading animation -->
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/loader"
+        style="@style/SpinKitView.ThreeBounce"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/darkPurple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -26,17 +27,17 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class ExploreActivity extends AppCompatActivity {
+public class Explore extends AppCompatActivity {
 
     ProgressBar triviaLoader;
     TextView trivia;
+    RelativeLayout findRecipes, searchByIngredients, winePairings, nutritionQA;
+    Button randomRecipe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explore);
-        RelativeLayout findRecipes, searchByIngredients, winePairings, nutritionQA;
-        Button recipeOfTheDay;
 
         // initialise elements
         trivia = findViewById(R.id.trivia);
@@ -45,14 +46,14 @@ public class ExploreActivity extends AppCompatActivity {
         // TRIVIA FUNCTIONALITY
 
         // initialise the HTTP client
-        OkHttpClient client = new OkHttpClient();
+        final OkHttpClient client = new OkHttpClient();
 
         // define the API endpoint
-        String endpoint = "https://api.spoonacular.com/food/trivia/random?apiKey=fc6fef8c0bb04e27ad8da3843fef1602";
+        String triviaEndpoint = "https://api.spoonacular.com/food/trivia/random?apiKey=fc6fef8c0bb04e27ad8da3843fef1602";
 
         // build a request object
         Request request = new Request.Builder()
-                .url(endpoint)
+                .url(triviaEndpoint)
                 .build();
 
         // make the HTTP call
@@ -61,7 +62,7 @@ public class ExploreActivity extends AppCompatActivity {
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
 
                 // display network error page on request failure
-                Intent networkErrorPageOpener = new Intent(ExploreActivity.this, NetworkError.class);
+                Intent networkErrorPageOpener = new Intent(Explore.this, NetworkError.class);
                 startActivity(networkErrorPageOpener);
                 e.printStackTrace();
                 finish();
@@ -70,24 +71,27 @@ public class ExploreActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onResponse(@NotNull Call call, @NotNull final Response response) throws IOException {
+
+                // log server response
+                final String serverResponse = Objects.requireNonNull(response.body()).string();
+                System.out.println("DEBUG RESPONSE: " + serverResponse);
+
                 if (response.isSuccessful()) {
-                    final String serverResponse = Objects.requireNonNull(response.body()).string();
-                    ExploreActivity.this.runOnUiThread(new Runnable() {
+                    Explore.this.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             try {
-                                System.out.println("DEBUG RESPONSE: " + serverResponse);
 
                                 // parse json response
                                 JSONObject json = new JSONObject(serverResponse);
-                                String result = json.getString("text");
+                                String triviaResult = json.getString("text");
 
                                 // remove the loader and show the result
                                 triviaLoader.setVisibility(View.GONE);
 
                                 // cut out large trivia responses and set a default value
-                                if (result.length() < 192) {
-                                    trivia.setText("Trivia: " + result);
+                                if (triviaResult.length() < 192) {
+                                    trivia.setText("Trivia: " + triviaResult);
                                 } else {
                                     trivia.setText("Trivia: Nutmeg is a hallucinogen.");
                                 }
@@ -116,7 +120,7 @@ public class ExploreActivity extends AppCompatActivity {
         findRecipes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent findRecipesPageOpener = new Intent(ExploreActivity.this, FindRecipes.class);
+                Intent findRecipesPageOpener = new Intent(Explore.this, FindRecipes.class);
                 startActivity(findRecipesPageOpener);
             }
         });
@@ -126,7 +130,7 @@ public class ExploreActivity extends AppCompatActivity {
         searchByIngredients.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent searchByIngredientsPageOpener = new Intent(ExploreActivity.this, SearchByIngredients.class);
+                Intent searchByIngredientsPageOpener = new Intent(Explore.this, SearchByIngredients.class);
                 startActivity(searchByIngredientsPageOpener);
             }
         });
@@ -136,7 +140,7 @@ public class ExploreActivity extends AppCompatActivity {
         winePairings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent winePairingsPageOpener = new Intent(ExploreActivity.this, WinePairings.class);
+                Intent winePairingsPageOpener = new Intent(Explore.this, WinePairings.class);
                 startActivity(winePairingsPageOpener);
             }
         });
@@ -146,17 +150,74 @@ public class ExploreActivity extends AppCompatActivity {
         nutritionQA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent nutritionQAPageOpener = new Intent(ExploreActivity.this, NutritionQA.class);
+                Intent nutritionQAPageOpener = new Intent(Explore.this, NutritionQA.class);
                 startActivity(nutritionQAPageOpener);
             }
         });
 
-        recipeOfTheDay = findViewById(R.id.recipeOfTheDay);
-        recipeOfTheDay.setOnClickListener(new View.OnClickListener() {
+        randomRecipe = findViewById(R.id.randomRecipe);
+        randomRecipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent testPageOpener = new Intent(ExploreActivity.this, Test.class);
-                startActivity(testPageOpener);
+
+                // make the HTTP call to get a random recipe
+                String randomRecipeEndpoint = "https://api.spoonacular.com/recipes/random?limitLicense=false&number=1&apiKey=fc6fef8c0bb04e27ad8da3843fef1602";
+
+                // build a request object
+                Request request = new Request.Builder()
+                        .url(randomRecipeEndpoint)
+                        .build();
+
+                // make the HTTP call
+                client.newCall(request).enqueue(new Callback() {
+                    @Override
+                    public void onFailure(@NotNull Call call, @NotNull IOException e) {
+
+                        // display network error page on request failure
+                        Intent networkErrorPageOpener = new Intent(Explore.this, NetworkError.class);
+                        startActivity(networkErrorPageOpener);
+                        e.printStackTrace();
+                        finish();
+                    }
+
+                    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+                    @Override
+                    public void onResponse(@NotNull Call call, @NotNull final Response response) throws IOException {
+
+                        // log server response
+                        final String serverResponse = Objects.requireNonNull(response.body()).string();
+                        System.out.println("DEBUG RESPONSE: " + serverResponse);
+
+                        if (response.isSuccessful()) {
+                            Explore.this.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    try {
+
+                                        // parse json response
+                                        JSONObject json = new JSONObject(serverResponse);
+                                        String randomRecipeUrl = json.getJSONArray("recipes").getJSONObject(0).getString("sourceUrl");
+
+                                        // open the browser with the random recipe url
+                                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(randomRecipeUrl));
+                                        startActivity(browserIntent);
+
+                                    } catch (JSONException e) {
+
+                                        // answer was not received from the API, display error to the user
+                                        randomRecipe.setText("Error :(");
+                                        e.printStackTrace();
+                                    }
+                                }
+                            });
+                        } else {
+
+                            // set the error message
+                            randomRecipe.setText("Error :(");
+                            System.out.println(Objects.requireNonNull(response.body()).string());
+                        }
+                    }
+                });
             }
         });
     }

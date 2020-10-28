@@ -37,7 +37,7 @@ public class ContactUs extends AppCompatActivity {
             public void onClick(View v) {
                 final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
                 emailIntent.setType("plain/text");
-                emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"gautham.is17@bmsce.ac.in", "aishwarya.is17@bmsce.ac.in"});
+                emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"gautham.is17@bmsce.ac.in", "aishwaryapatil.is17@bmsce.ac.in"});
                 startActivity(emailIntent);
             }
         });
@@ -52,7 +52,7 @@ public class ContactUs extends AppCompatActivity {
 
                 // add hash tag with URL encoding
                 try {
-                    tweetUrl += URLEncoder.encode("Try out The Lazy Chef app today and find your recipes, quicker! \n\nhttps://github.com/gauthammk/the-lazy-chef-android \n\n#thelazychef #recipesquicker", StandardCharsets.UTF_8.toString());
+                    tweetUrl += URLEncoder.encode("Try out The Lazy Chef app today and find your recipes, quicker! \n\nhttps://github.com/gauthammk/the-lazy-chef-android \n\n#thelazychef #recipesquicker \n\n@i_amgmk @AishPatil23", StandardCharsets.UTF_8.toString());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

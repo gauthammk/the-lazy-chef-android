@@ -38,7 +38,7 @@ public class NutritionQAResults extends AppCompatActivity {
         final String nutritionQuery = getIntent().getStringExtra("NUTRITION_QUERY");
 
         // initialise the loader
-        loader = findViewById(R.id.loader1);
+        loader = findViewById(R.id.loader);
 
         // initialise the text view for displaying results
         nutritionQAResults = findViewById(R.id.nutritionQAResults);
@@ -69,13 +69,16 @@ public class NutritionQAResults extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onResponse(@NotNull Call call, @NotNull final Response response) throws IOException {
+
+                // log server response
+                final String serverResponse = Objects.requireNonNull(response.body()).string();
+                System.out.println("DEBUG RESPONSE: " + serverResponse);
+
                 if (response.isSuccessful()) {
-                    final String serverResponse = Objects.requireNonNull(response.body()).string();
                     NutritionQAResults.this.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             try {
-                                System.out.println("DEBUG RESPONSE: " + serverResponse);
 
                                 // parse json response
                                 JSONObject json = new JSONObject(serverResponse);

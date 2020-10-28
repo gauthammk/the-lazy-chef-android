@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ContactUs"></activity>
+        <activity android:name=".AdvancedSearch"></activity>
+        <activity android:name=".ContactUs" />
         <activity android:name=".NetworkError" />
         <activity android:name=".SearchByIngredientsResults" />
         <activity android:name=".WinePairingsResults" />
@@ -23,7 +24,7 @@
         <activity android:name=".WinePairings" />
         <activity android:name=".FindRecipes" />
         <activity android:name=".SearchByIngredients" />
-        <activity android:name=".ExploreActivity" />
+        <activity android:name=".Explore" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

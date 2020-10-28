@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".ExploreActivity">
+    tools:context=".Explore">
 
     <!-- Explore -->
     <TextView
@@ -219,14 +219,14 @@
 
     <!-- Recipe of the day -->
     <Button
-        android:id="@+id/recipeOfTheDay"
+        android:id="@+id/randomRecipe"
         android:layout_width="330dp"
         android:layout_height="62dp"
         android:layout_marginTop="411dp"
         android:background="@drawable/menu_button"
         android:fontFamily="@font/montserrat_semibold"
         android:onClick="onClickBtn"
-        android:text="@string/recipe_of_the_day"
+        android:text="@string/random_recipe"
         android:textAllCaps="false"
         android:textColor="@color/altGreen"
         android:textSize="18sp"

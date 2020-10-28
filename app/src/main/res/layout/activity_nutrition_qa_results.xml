@@ -7,9 +7,8 @@
     android:layout_gravity="center"
     tools:context=".NutritionQAResults">
 
-    <!-- Answers -->
     <TextView
-        android:id="@+id/nutritionQAAnswers"
+        android:id="@+id/nutritionQAResultsHeading"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="215dp"
@@ -23,7 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:targetApi="p" />
 
-    <!-- Results -->
     <TextView
         android:id="@+id/nutritionQAResults"
         android:layout_width="330dp"
@@ -32,8 +30,8 @@
         android:textAppearance="@style/subHeading"
         android:translationZ="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/nutritionQAAnswers"
-        app:layout_constraintStart_toStartOf="@+id/nutritionQAAnswers"
+        app:layout_constraintEnd_toEndOf="@+id/nutritionQAResultsHeading"
+        app:layout_constraintStart_toStartOf="@+id/nutritionQAResultsHeading"
         app:layout_constraintTop_toTopOf="parent"
         tools:targetApi="lollipop" />
 
@@ -89,7 +87,7 @@
 
     <!-- Loading animation -->
     <com.github.ybq.android.spinkit.SpinKitView
-        android:id="@+id/loader1"
+        android:id="@+id/loader"
         style="@style/SpinKitView.ThreeBounce"
         android:layout_width="40dp"
         android:layout_height="40dp"

@@ -40,7 +40,7 @@ public class NutritionQA extends AppCompatActivity {
                     startActivity(nutritionQAResultsPageOpener);
                 } else {
 
-                    // shake box
+                    // shake box if no query is entered
                     YoYo.with(Techniques.Shake)
                             .duration(700)
                             .repeat(0)

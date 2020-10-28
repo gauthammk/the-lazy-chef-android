@@ -42,7 +42,7 @@ public class FindRecipes extends AppCompatActivity {
                     startActivity(findRecipesResultsOpener);
                 } else {
 
-                    // shake box
+                    // shake box if no query is entered
                     YoYo.with(Techniques.Shake)
                             .duration(700)
                             .repeat(0)
