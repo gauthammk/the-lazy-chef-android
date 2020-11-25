@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".NetworkError">
 
-    <!-- HTTP 404 -->
     <TextView
         android:id="@+id/networkErrorHeading"
         android:layout_width="330dp"
@@ -22,7 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:targetApi="p" />
 
-    <!-- Results -->
     <TextView
         android:id="@+id/networkErrorSubheading"
         android:layout_width="330dp"
@@ -73,7 +71,6 @@
         app:layout_constraintGuide_percent="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Back button -->
     <ImageView
         android:id="@+id/backButton"
         android:layout_width="wrap_content"

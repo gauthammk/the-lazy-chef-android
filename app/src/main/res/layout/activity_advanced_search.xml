@@ -6,4 +6,193 @@
     android:layout_height="match_parent"
     tools:context=".AdvancedSearch">
 
+    <TextView
+        android:id="@+id/advancedSearchHeading"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="187dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:lineHeight="44sp"
+        android:text="@string/advanced_search"
+        android:textAppearance="@style/heading"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="p" />
+
+    <TextView
+        android:id="@+id/advancedSearchSubheading"
+        android:layout_width="330dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/advanced_search_subheading"
+        android:textAppearance="@style/subHeading"
+        android:translationZ="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/advancedSearchHeading"
+        app:layout_constraintStart_toStartOf="@+id/advancedSearchHeading"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSearchHeading"
+        tools:targetApi="lollipop" />
+
+    <ImageView
+        android:id="@+id/ellipse2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ic_ellipse_2"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ellipse3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ic_ellipse_3"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ellipse1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_ellipse_1"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/enterDish"
+        android:layout_width="330dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="91dp"
+        android:autofillHints="comma separated"
+        android:background="@drawable/textbox"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:hint="@string/dish"
+        android:inputType="textPersonName"
+        android:textColor="@color/darkPurple"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/advancedSearchHeading"
+        app:layout_constraintStart_toStartOf="@+id/advancedSearchHeading"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSearchHeading"
+        tools:targetApi="jelly_bean" />
+
+    <EditText
+        android:id="@+id/enterCuisine"
+        android:layout_width="330dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="161dp"
+        android:autofillHints="comma separated"
+        android:background="@drawable/textbox"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:hint="@string/cuisine"
+        android:inputType="textPersonName"
+        android:textColor="@color/darkPurple"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/advancedSearchHeading"
+        app:layout_constraintStart_toStartOf="@+id/advancedSearchHeading"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSearchHeading"
+        tools:targetApi="jelly_bean" />
+
+    <EditText
+        android:id="@+id/enterDiet"
+        android:layout_width="330dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="231dp"
+        android:autofillHints="comma separated"
+        android:background="@drawable/textbox"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:hint="@string/diet"
+        android:inputType="textPersonName"
+        android:textColor="@color/darkPurple"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/advancedSearchHeading"
+        app:layout_constraintStart_toStartOf="@+id/advancedSearchHeading"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSearchHeading"
+        tools:targetApi="jelly_bean" />
+
+    <EditText
+        android:id="@+id/enterExcludeIngredients"
+        android:layout_width="330dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="301dp"
+        android:autofillHints="comma separated"
+        android:background="@drawable/textbox"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:hint="@string/exclude_ingredients"
+        android:inputType="textPersonName"
+        android:textColor="@color/darkPurple"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/advancedSearchHeading"
+        app:layout_constraintStart_toStartOf="@+id/advancedSearchHeading"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSearchHeading"
+        tools:targetApi="jelly_bean" />
+
+    <EditText
+        android:id="@+id/enterIntolerances"
+        android:layout_width="330dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="371dp"
+        android:autofillHints="comma separated"
+        android:background="@drawable/textbox"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:hint="@string/intolerances"
+        android:inputType="textPersonName"
+        android:textColor="@color/darkPurple"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/advancedSearchHeading"
+        app:layout_constraintStart_toStartOf="@+id/advancedSearchHeading"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSearchHeading"
+        tools:targetApi="jelly_bean" />
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="108dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="455dp"
+        android:background="@drawable/menu_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/go"
+        android:textAllCaps="false"
+        android:textColor="@color/altGreen"
+        android:onClick="onClickBtn"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/advancedSearchHeading"
+        app:layout_constraintStart_toStartOf="@+id/advancedSearchHeading"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSearchHeading"
+        tools:targetApi="jelly_bean" />
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_back_arrow"
+        tools:ignore="ContentDescription"
+        android:onClick="backButtonClickHandler"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

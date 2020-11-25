@@ -17,6 +17,7 @@ public class FindRecipes extends AppCompatActivity {
 
     RelativeLayout searchButton;
     TextView enterDish;
+    Button advancedSearchButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class FindRecipes extends AppCompatActivity {
         // initialise text view
         enterDish = findViewById(R.id.enterDish);
 
-        // move to wine pairings results page on pressing goButton
+        // move to recipe results results page on pressing goButton
         searchButton = findViewById(R.id.searchButton);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +50,15 @@ public class FindRecipes extends AppCompatActivity {
                             .playOn(findViewById(R.id.enterDish));
                     Toast.makeText(getApplicationContext(), "Please enter a valid query!", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        
+        advancedSearchButton = findViewById(R.id.advancedSearchButton);
+        advancedSearchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent advancedSearchPageOpener = new Intent(FindRecipes.this, AdvancedSearch.class);
+                startActivity(advancedSearchPageOpener);
             }
         });
     }

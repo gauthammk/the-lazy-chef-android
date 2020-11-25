@@ -7,7 +7,6 @@
     android:layout_gravity="center"
     tools:context=".FindRecipes">
 
-    <!-- Search by ingredients -->
     <TextView
         android:id="@+id/findRecipesHeading"
         android:layout_width="330dp"
@@ -23,7 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:targetApi="p" />
 
-    <!-- Subheading -->
     <TextView
         android:id="@+id/winePairingsSubheading"
         android:layout_width="330dp"
@@ -156,7 +154,6 @@
             tools:ignore="ContentDescription" />
     </RelativeLayout>
 
-    <!-- Back button -->
     <ImageView
         android:id="@+id/backButton"
         android:layout_width="wrap_content"

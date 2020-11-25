@@ -26,37 +26,42 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class FindRecipesResults extends AppCompatActivity {
+public class AdvancedSearchResults extends AppCompatActivity {
 
     ProgressBar loader;
-    TextView recipeResults1, recipeResults2, recipeResults3, recipeResults4, recipeResults5, recipeResults6;
-    TextView findRecipesResultsSubheading;
+    TextView advResults1, advResults2, advResults3, advResults4, advResults5, advResults6;
+    TextView advancedSearchResultsSubheading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_find_recipes_results);
+        setContentView(R.layout.activity_advanced_search_results);
 
-        // get query from previous find recipes page
+        // get query from previous advanced search page
         final String dishQuery = getIntent().getStringExtra("DISH_QUERY");
+        String cuisineQuery = getIntent().getStringExtra("CUISINE_QUERY");
+        String dietQuery = getIntent().getStringExtra("DIET_QUERY");
+        String excludeIngredientsQuery = getIntent().getStringExtra("EXCLUDE_INGREDIENTS_QUERY");
+        String intolerancesQuery = getIntent().getStringExtra("INTOLERANCES_QUERY");
 
         // initialise the loader
         loader = findViewById(R.id.loader);
 
         // initialise the text views for displaying results
-        recipeResults1 = findViewById(R.id.recipeResult1);
-        recipeResults2 = findViewById(R.id.recipeResult2);
-        recipeResults3 = findViewById(R.id.recipeResult3);
-        recipeResults4 = findViewById(R.id.recipeResult4);
-        recipeResults5 = findViewById(R.id.recipeResult5);
-        recipeResults6 = findViewById(R.id.recipeResult6);
-        findRecipesResultsSubheading = findViewById(R.id.findRecipesResultsSubheading);
+        advResults1 = findViewById(R.id.advResult1);
+        advResults2 = findViewById(R.id.advResult2);
+        advResults3 = findViewById(R.id.advResult3);
+        advResults4 = findViewById(R.id.advResult4);
+        advResults5 = findViewById(R.id.advResult5);
+        advResults6 = findViewById(R.id.advResult6);
+        advancedSearchResultsSubheading = findViewById(R.id.advancedSearchResultsSubheading);
 
         // initialise the HTTP client
         OkHttpClient client = new OkHttpClient();
 
         // define the API endpoint
-        String endpoint = "https://api.spoonacular.com/recipes/search?query=" + dishQuery + "&number=6&instructionsRequired=true&apiKey=fc6fef8c0bb04e27ad8da3843fef1602";
+        String endpoint = "https://api.spoonacular.com/recipes/search?query=" + dishQuery + "&cuisine=" + cuisineQuery + "&diet=" + dietQuery + "&excludeIngredients=" + excludeIngredientsQuery + "&intolerances=" + intolerancesQuery+ "&number=6&instructionsRequired=true&apiKey=fc6fef8c0bb04e27ad8da3843fef1602";
+        System.out.println("ENDPOINT DEBUG RESPONSE: " + endpoint);
 
         // build a request object
         Request request = new Request.Builder()
@@ -69,12 +74,11 @@ public class FindRecipesResults extends AppCompatActivity {
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
 
                 // display network error page on request failure
-                Intent networkErrorPageOpener = new Intent(FindRecipesResults.this, NetworkError.class);
+                Intent networkErrorPageOpener = new Intent(AdvancedSearchResults.this, NetworkError.class);
                 startActivity(networkErrorPageOpener);
                 e.printStackTrace();
                 finish();
             }
-
             @SuppressLint("SetTextI18n")
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
@@ -85,7 +89,8 @@ public class FindRecipesResults extends AppCompatActivity {
                 System.out.println("DEBUG RESPONSE: " + serverResponse);
 
                 if (response.isSuccessful()) {
-                    FindRecipesResults.this.runOnUiThread(new Runnable() {
+                    AdvancedSearchResults.this.runOnUiThread(new Runnable() {
+                        @SuppressLint("SetTextI18n")
                         @Override
                         public void run() {
                             try {
@@ -100,121 +105,121 @@ public class FindRecipesResults extends AppCompatActivity {
                                     loader.setVisibility(View.GONE);
 
                                     // display the search query
-                                    findRecipesResultsSubheading.setText("Search results for " + dishQuery);
+                                    advancedSearchResultsSubheading.setText("Search results for " + dishQuery);
 
-                                    // MAIN DISPLAY : make the text views visible and display the results(from the previously parsed json) for all 6 recipes
-                                    System.out.println("DEBUG RESPONSE: " + results);
+                                    // MAIN DISPLAY : make the text views visible and display the results(from the previously parsed json) for all 6 Advsearch
 
-                                    // set recipe 1
+                                    // set advSearch result 1
                                     JSONObject result1 = results.getJSONObject(0);
-                                    String recipe1 = result1.getString("title");
-                                    final String recipeLink1 = result1.getString("sourceUrl");
+                                    String advSearch1 = result1.getString("title");
+                                    final String advSearchLink1 = result1.getString("sourceUrl");
 
                                     // shorten long responses
-                                    if (recipe1.length() > 90) recipe1 = recipe1.substring(0, 85) + "...";
-                                    recipeResults1.setVisibility(View.VISIBLE);
-                                    recipeResults1.setText(recipe1);
+                                    if (advSearch1.length() > 90) advSearch1 = advSearch1.substring(0, 85) + "...";
+                                    advResults1.setVisibility(View.VISIBLE);
+                                    advResults1.setText(advSearch1);
 
                                     // open recipe link on click
-                                    recipeResults1.setOnClickListener(new View.OnClickListener() {
+                                    advResults1.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
-                                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(recipeLink1));
+                                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(advSearchLink1));
                                             startActivity(browserIntent);
                                         }
                                     });
 
+
                                     // set recipe 2
                                     JSONObject result2 = results.getJSONObject(1);
-                                    String recipe2 = result2.getString("title");
-                                    final String recipeLink2 = result2.getString("sourceUrl");
+                                    String advSearch2 = result2.getString("title");
+                                    final String advSearchLink2 = result2.getString("sourceUrl");
 
                                     // shorten long responses
-                                    if (recipe2.length() > 90) recipe2 = recipe2.substring(0, 85) + "...";
-                                    recipeResults2.setVisibility(View.VISIBLE);
-                                    recipeResults2.setText(recipe2);
+                                    if (advSearch2.length() > 90) advSearch2 = advSearch2.substring(0, 85) + "...";
+                                    advResults2.setVisibility(View.VISIBLE);
+                                    advResults2.setText(advSearch2);
 
                                     // open recipe link on click
-                                    recipeResults2.setOnClickListener(new View.OnClickListener() {
+                                    advResults2.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
-                                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(recipeLink2));
+                                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(advSearchLink2));
                                             startActivity(browserIntent);
                                         }
                                     });
 
                                     // set recipe 3
                                     JSONObject result3 = results.getJSONObject(2);
-                                    String recipe3 = result3.getString("title");
-                                    final String recipeLink3 = result3.getString("sourceUrl");
+                                    String advSearch3 = result3.getString("title");
+                                    final String advSearchLink3 = result3.getString("sourceUrl");
 
                                     // shorten long responses
-                                    if (recipe3.length() > 90) recipe3 = recipe3.substring(0, 85) + "...";
-                                    recipeResults3.setVisibility(View.VISIBLE);
-                                    recipeResults3.setText(recipe3);
+                                    if (advSearch3.length() > 90) advSearch3 = advSearch3.substring(0, 85) + "...";
+                                    advResults3.setVisibility(View.VISIBLE);
+                                    advResults3.setText(advSearch3);
 
                                     // open recipe link on click
-                                    recipeResults3.setOnClickListener(new View.OnClickListener() {
+                                    advResults3.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
-                                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(recipeLink3));
+                                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(advSearchLink3));
                                             startActivity(browserIntent);
                                         }
                                     });
 
                                     // set recipe 4
                                     JSONObject result4 = results.getJSONObject(3);
-                                    String recipe4 = result4.getString("title");
-                                    final String recipeLink4 = result4.getString("sourceUrl");
+                                    String advSearch4 = result4.getString("title");
+                                    final String advSearchLink4 = result4.getString("sourceUrl");
 
                                     // shorten long responses
-                                    if (recipe4.length() > 90) recipe4 = recipe4.substring(0, 85) + "...";
-                                    recipeResults4.setVisibility(View.VISIBLE);
-                                    recipeResults4.setText(recipe4);
+                                    if (advSearch4.length() > 90) advSearch4 = advSearch4.substring(0, 85) + "...";
+                                    advResults4.setVisibility(View.VISIBLE);
+                                    advResults4.setText(advSearch4);
 
                                     // open recipe link on click
-                                    recipeResults4.setOnClickListener(new View.OnClickListener() {
+                                    advResults4.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
-                                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(recipeLink4));
+                                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(advSearchLink4));
                                             startActivity(browserIntent);
                                         }
                                     });
 
                                     // set recipe 5
                                     JSONObject result5 = results.getJSONObject(4);
-                                    String recipe5 = result5.getString("title");
-                                    final String recipeLink5 = result5.getString("sourceUrl");
+                                    String advSearch5 = result5.getString("title");
+                                    final String advSearchLink5 = result5.getString("sourceUrl");
 
                                     // shorten long responses
-                                    if (recipe5.length() > 90) recipe5 = recipe5.substring(0, 85) + "...";
-                                    recipeResults5.setVisibility(View.VISIBLE);
-                                    recipeResults5.setText(recipe5);
+                                    if (advSearch5.length() > 90) advSearch5 = advSearch5.substring(0, 85) + "...";
+                                    advResults5.setVisibility(View.VISIBLE);
+                                    advResults5.setText(advSearch5);
 
                                     // open recipe link on click
-                                    recipeResults5.setOnClickListener(new View.OnClickListener() {
+                                    advResults5.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
-                                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(recipeLink5));
+                                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(advSearchLink5));
                                             startActivity(browserIntent);
                                         }
                                     });
 
                                     // set recipe 6
                                     JSONObject result6 = results.getJSONObject(5);
-                                    String recipe6 = result6.getString("title");
-                                    final String recipeLink6 = result6.getString("sourceUrl");
+                                    String advSearch6 = result6.getString("title");
+                                    final String advSearchLink6 = result6.getString("sourceUrl");
 
                                     // shorten long responses
-                                    if (recipe6.length() > 90) recipe6 = recipe6.substring(0, 85) + "...";
-                                    recipeResults6.setVisibility(View.VISIBLE);
-                                    recipeResults6.setText(recipe6);
+                                    if (advSearch6.length() > 90) advSearch6 = advSearch6.substring(0, 85) + "...";
+                                    advResults6.setVisibility(View.VISIBLE);
+                                    advResults6.setText(advSearch6);
 
                                     // open recipe link on click
-                                    recipeResults6.setOnClickListener(new View.OnClickListener() {
+                                    advResults6.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
-                                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(recipeLink6));
+                                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(advSearchLink6));
                                             startActivity(browserIntent);
                                         }
                                     });
@@ -224,7 +229,7 @@ public class FindRecipesResults extends AppCompatActivity {
                                     loader.setVisibility(View.GONE);
 
                                     // answer was not received from the API, display error to the user
-                                    findRecipesResultsSubheading.setText("Oops! We couldn't find any results for " + dishQuery + " :( \n Please try rephrasing your query.");
+                                    advancedSearchResultsSubheading.setText("Oops!We couldn't find any results :( \n Please try rephrasing your query.");
                                 }
 
                             } catch (JSONException e) {
@@ -233,7 +238,7 @@ public class FindRecipesResults extends AppCompatActivity {
                                 loader.setVisibility(View.GONE);
 
                                 // answer was not received from the API, display error to the user
-                                findRecipesResultsSubheading.setText("Oops! That did not work :( \n Please try rephrasing your query.");
+                                advancedSearchResultsSubheading.setText("Oops! That did not work :( \n Please try rephrasing your query.");
                                 e.printStackTrace();
                             }
                         }
@@ -242,7 +247,7 @@ public class FindRecipesResults extends AppCompatActivity {
 
                     // remove the loader and set the error message
                     loader.setVisibility(View.GONE);
-                    findRecipesResultsSubheading.setText("An unknown error occurred. Please contact the administrator.");
+                    advancedSearchResultsSubheading.setText("An unknown error occurred. Please contact the administrator.");
                 }
             }
         });

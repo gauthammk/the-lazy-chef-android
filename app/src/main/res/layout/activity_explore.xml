@@ -7,7 +7,6 @@
     android:layout_gravity="center"
     tools:context=".Explore">
 
-    <!-- Explore -->
     <TextView
         android:id="@+id/explore"
         android:layout_width="330dp"
@@ -23,23 +22,32 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:targetApi="p" />
 
-    <!-- Trivia -->
     <TextView
         android:id="@+id/trivia"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:minHeight="96dp"
         android:layout_marginTop="43dp"
         android:gravity="center_horizontal|center_vertical"
+        android:minHeight="96dp"
         android:textAppearance="@style/subHeading"
+        android:translationZ="1dp"
         app:layout_constraintEnd_toEndOf="@+id/explore"
         app:layout_constraintStart_toStartOf="@+id/explore"
         app:layout_constraintTop_toBottomOf="@+id/explore"
-        android:translationZ="1dp"
         tools:targetApi="lollipop" />
 
+    <ImageView
+        android:id="@+id/lightBulb"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:background="@drawable/ic_light_bulb"
+        app:layout_constraintBottom_toBottomOf="@+id/trivia"
+        app:layout_constraintEnd_toEndOf="@+id/trivia"
+        app:layout_constraintStart_toStartOf="@+id/trivia"
+        app:layout_constraintTop_toTopOf="@+id/trivia"
+        android:visibility="invisible"
+        tools:ignore="ContentDescription" />
 
-    <!-- Menu -->
     <com.github.ybq.android.spinkit.SpinKitView
         android:id="@+id/triviaLoader"
         style="@style/SpinKitView.ThreeBounce"
@@ -63,7 +71,8 @@
         app:layout_constraintStart_toStartOf="@+id/explore"
         app:layout_constraintTop_toBottomOf="@+id/explore"
         tools:ignore="SmallSp"
-        tools:targetApi="jelly_bean">
+        tools:targetApi="lollipop"
+        android:elevation="5dp">
 
         <ImageView
             android:layout_width="28dp"
@@ -104,7 +113,8 @@
         app:layout_constraintEnd_toEndOf="@+id/explore"
         app:layout_constraintTop_toBottomOf="@+id/explore"
         tools:ignore="SmallSp"
-        tools:targetApi="jelly_bean">
+        tools:targetApi="lollipop"
+        android:elevation="5dp">
 
         <ImageView
             android:layout_width="28dp"
@@ -145,7 +155,8 @@
         app:layout_constraintStart_toStartOf="@+id/explore"
         app:layout_constraintTop_toBottomOf="@+id/explore"
         tools:ignore="SmallSp"
-        tools:targetApi="jelly_bean">
+        tools:targetApi="lollipop"
+        android:elevation="5dp">
 
         <ImageView
             android:layout_width="15.88dp"
@@ -187,7 +198,8 @@
         app:layout_constraintEnd_toEndOf="@+id/explore"
         app:layout_constraintTop_toBottomOf="@+id/explore"
         tools:ignore="SmallSp"
-        tools:targetApi="jelly_bean">
+        tools:targetApi="lollipop"
+        android:elevation="5dp">
 
         <ImageView
             android:layout_width="28dp"
@@ -217,8 +229,7 @@
             android:textSize="10sp" />
     </RelativeLayout>
 
-    <!-- Recipe of the day -->
-    <Button
+    <TextView
         android:id="@+id/randomRecipe"
         android:layout_width="330dp"
         android:layout_height="62dp"
@@ -227,13 +238,15 @@
         android:fontFamily="@font/montserrat_semibold"
         android:onClick="onClickBtn"
         android:text="@string/random_recipe"
+        android:gravity="center"
         android:textAllCaps="false"
         android:textColor="@color/altGreen"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/explore"
         app:layout_constraintStart_toStartOf="@+id/explore"
         app:layout_constraintTop_toBottomOf="@+id/explore"
-        tools:targetApi="jelly_bean" />
+        tools:targetApi="lollipop"
+        android:elevation="5dp"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -272,7 +285,6 @@
         android:background="@drawable/ic_ellipse_1"
         tools:ignore="ContentDescription" />
 
-    <!-- Back button -->
     <ImageView
         android:id="@+id/backButton"
         android:layout_width="wrap_content"

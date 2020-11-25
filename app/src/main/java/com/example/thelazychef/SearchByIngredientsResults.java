@@ -169,7 +169,7 @@ public class SearchByIngredientsResults extends AppCompatActivity {
                                 loader.setVisibility(View.GONE);
 
                                 // answer was not received from the API, display error to the user
-                                searchByIngredientsResultsSubheading.setText("Oops! That did not work :( \n Please try rephrasing your query.");
+                                searchByIngredientsResultsSubheading.setText("Oops! That did not work too well :( \n Please try rephrasing your query.");
                                 e.printStackTrace();
                             }
                         }

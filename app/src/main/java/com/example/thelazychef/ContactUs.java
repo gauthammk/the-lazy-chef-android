@@ -9,12 +9,17 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
 public class ContactUs extends AppCompatActivity {
 
-    ImageView githubButton, mailButton, twitterButton;
+    RelativeLayout githubButton, mailButton, twitterButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

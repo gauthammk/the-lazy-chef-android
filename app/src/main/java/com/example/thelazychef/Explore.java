@@ -3,12 +3,14 @@ package com.example.thelazychef;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -32,7 +34,8 @@ public class Explore extends AppCompatActivity {
     ProgressBar triviaLoader;
     TextView trivia;
     RelativeLayout findRecipes, searchByIngredients, winePairings, nutritionQA;
-    Button randomRecipe;
+    TextView randomRecipe;
+    ImageView lightBulb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,7 @@ public class Explore extends AppCompatActivity {
         // initialise elements
         trivia = findViewById(R.id.trivia);
         triviaLoader = findViewById(R.id.triviaLoader);
+        lightBulb = findViewById(R.id.lightBulb);
 
         // TRIVIA FUNCTIONALITY
 
@@ -78,6 +82,7 @@ public class Explore extends AppCompatActivity {
 
                 if (response.isSuccessful()) {
                     Explore.this.runOnUiThread(new Runnable() {
+                        @SuppressLint("SetTextI18n")
                         @Override
                         public void run() {
                             try {
@@ -85,6 +90,9 @@ public class Explore extends AppCompatActivity {
                                 // parse json response
                                 JSONObject json = new JSONObject(serverResponse);
                                 String triviaResult = json.getString("text");
+
+                                // display the light bulb icon
+                                lightBulb.setVisibility(View.VISIBLE);
 
                                 // remove the loader and show the result
                                 triviaLoader.setVisibility(View.GONE);

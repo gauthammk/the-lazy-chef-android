@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".SearchByIngredientsResults">
+    tools:context=".AdvancedSearchResults">
 
     <TextView
-        android:id="@+id/searchByIngredientsResultsHeading"
+        android:id="@+id/advancedSearchResultsHeading"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="215dp"
         android:gravity="center_horizontal|center_vertical"
         android:lineHeight="44sp"
-        android:text="@string/recipes"
+        android:text="@string/results"
         android:textAppearance="@style/heading"
         android:translationZ="1dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
@@ -24,17 +24,17 @@
         tools:targetApi="p" />
 
     <TextView
-        android:id="@+id/searchByIngredientsResultsSubheading"
+        android:id="@+id/advancedSearchResultsSubheading"
         android:layout_width="330dp"
         android:layout_height="47dp"
         android:layout_marginTop="51dp"
         android:gravity="center_horizontal|center_vertical"
         android:textAppearance="@style/subHeading"
         android:translationZ="1dp"
-        app:layout_constraintEnd_toEndOf="@+id/searchByIngredientsResultsHeading"
+        app:layout_constraintEnd_toEndOf="@+id/advancedSearchResultsHeading"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/searchByIngredientsResultsHeading"
-        app:layout_constraintTop_toBottomOf="@+id/searchByIngredientsResultsHeading"
+        app:layout_constraintStart_toStartOf="@+id/advancedSearchResultsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSearchResultsHeading"
         tools:targetApi="lollipop" />
 
     <ImageView
@@ -66,13 +66,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/recipeResult1"
+        android:id="@+id/advResult1"
         android:layout_width="157dp"
         android:layout_height="97dp"
         android:layout_marginTop="148dp"
         android:background="@drawable/textbox"
-        app:layout_constraintStart_toStartOf="@+id/searchByIngredientsResultsHeading"
-        app:layout_constraintTop_toBottomOf="@+id/searchByIngredientsResultsHeading"
+        app:layout_constraintStart_toStartOf="@+id/advancedSearchResultsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSearchResultsHeading"
         tools:ignore="SmallSp"
         tools:targetApi="jelly_bean"
         android:visibility="invisible"
@@ -82,13 +82,13 @@
         android:padding="15dp"/>
 
     <TextView
-        android:id="@+id/recipeResult2"
+        android:id="@+id/advResult2"
         android:layout_width="157dp"
         android:layout_height="97dp"
         android:layout_marginTop="148dp"
         android:background="@drawable/textbox"
-        app:layout_constraintEnd_toEndOf="@+id/searchByIngredientsResultsHeading"
-        app:layout_constraintTop_toBottomOf="@+id/searchByIngredientsResultsHeading"
+        app:layout_constraintEnd_toEndOf="@+id/advancedSearchResultsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSearchResultsHeading"
         tools:ignore="SmallSp"
         tools:targetApi="jelly_bean"
         android:visibility="invisible"
@@ -98,13 +98,13 @@
         android:padding="15dp"/>
 
     <TextView
-        android:id="@+id/recipeResult3"
+        android:id="@+id/advResult3"
         android:layout_width="157dp"
         android:layout_height="97dp"
         android:layout_marginTop="262dp"
         android:background="@drawable/textbox"
-        app:layout_constraintStart_toStartOf="@+id/searchByIngredientsResultsHeading"
-        app:layout_constraintTop_toBottomOf="@+id/searchByIngredientsResultsHeading"
+        app:layout_constraintStart_toStartOf="@+id/advancedSearchResultsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSearchResultsHeading"
         tools:ignore="SmallSp"
         tools:targetApi="jelly_bean"
         android:visibility="invisible"
@@ -114,13 +114,13 @@
         android:padding="15dp" />
 
     <TextView
-        android:id="@+id/recipeResult4"
+        android:id="@+id/advResult4"
         android:layout_width="157dp"
         android:layout_height="97dp"
         android:layout_marginTop="262dp"
         android:background="@drawable/textbox"
-        app:layout_constraintEnd_toEndOf="@+id/searchByIngredientsResultsHeading"
-        app:layout_constraintTop_toBottomOf="@+id/searchByIngredientsResultsHeading"
+        app:layout_constraintEnd_toEndOf="@+id/advancedSearchResultsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSearchResultsHeading"
         tools:ignore="SmallSp"
         tools:targetApi="jelly_bean"
         android:visibility="invisible"
@@ -130,13 +130,13 @@
         android:padding="15dp" />
 
     <TextView
-        android:id="@+id/recipeResult5"
+        android:id="@+id/advResult5"
         android:layout_width="157dp"
         android:layout_height="97dp"
         android:layout_marginTop="376dp"
         android:background="@drawable/textbox"
-        app:layout_constraintStart_toStartOf="@+id/searchByIngredientsResultsHeading"
-        app:layout_constraintTop_toBottomOf="@+id/searchByIngredientsResultsHeading"
+        app:layout_constraintStart_toStartOf="@+id/advancedSearchResultsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSearchResultsHeading"
         tools:ignore="SmallSp"
         tools:targetApi="jelly_bean"
         android:visibility="invisible"
@@ -146,13 +146,13 @@
         android:padding="15dp" />
 
     <TextView
-        android:id="@+id/recipeResult6"
+        android:id="@+id/advResult6"
         android:layout_width="157dp"
         android:layout_height="97dp"
         android:layout_marginTop="376dp"
         android:background="@drawable/textbox"
-        app:layout_constraintEnd_toEndOf="@+id/searchByIngredientsResultsHeading"
-        app:layout_constraintTop_toBottomOf="@+id/searchByIngredientsResultsHeading"
+        app:layout_constraintEnd_toEndOf="@+id/advancedSearchResultsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSearchResultsHeading"
         tools:ignore="SmallSp"
         tools:targetApi="jelly_bean"
         android:visibility="invisible"

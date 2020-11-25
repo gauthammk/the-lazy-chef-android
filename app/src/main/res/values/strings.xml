@@ -19,7 +19,7 @@
     <string name="find_recipes_subheading">Browse the largest online database of recipes and cook up a storm!</string>
     <string name="enter_dish">Enter dish</string>
     <string name="example_dish">eg. black bean burrito</string>
-    <string name="advanced_search">Advanced</string>
+    <string name="advanced_search">Advanced Search</string>
     <string name="nutrition_qa_subheading">Worried about how many carbs are in your cheat meal? We\’ve got your back.</string>
     <string name="ask_me_anything">Ask me anything</string>
     <string name="example_question">eg. how much protein in chicken</string>
@@ -38,4 +38,11 @@
     <string name="github_text">We’re open source! Find us on GitHub and leave a star if you like our work :)</string>
     <string name="mail_text">Questions? Feel free to drop us a mail anytime.</string>
     <string name="twitter_text">Tweet about us!\n #thelazychef</string>
+    <string name="advanced_search_subheading">Customize your search with these filters</string>
+    <string name="cuisine">Cuisine</string>
+    <string name="diet">Diet</string>
+    <string name="exclude_ingredients">Exclude Ingredients</string>
+    <string name="intolerances">Intolerances</string>
+    <string name="dish">Dish</string>
+
 </resources>
