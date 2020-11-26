@@ -233,7 +233,7 @@ public class FindRecipesResults extends AppCompatActivity {
                                 loader.setVisibility(View.GONE);
 
                                 // answer was not received from the API, display error to the user
-                                findRecipesResultsSubheading.setText("Oops! That did not work :( \n Please try rephrasing your query.");
+                                findRecipesResultsSubheading.setText("Oops! That did not work too well :( \n Please try rephrasing your query.");
                                 e.printStackTrace();
                             }
                         }

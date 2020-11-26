@@ -229,7 +229,7 @@ public class AdvancedSearchResults extends AppCompatActivity {
                                     loader.setVisibility(View.GONE);
 
                                     // answer was not received from the API, display error to the user
-                                    advancedSearchResultsSubheading.setText("Oops!We couldn't find any results :( \n Please try rephrasing your query.");
+                                    advancedSearchResultsSubheading.setText("Oops! That did not work too well :( \n Please try rephrasing your query.");
                                 }
 
                             } catch (JSONException e) {
@@ -238,7 +238,7 @@ public class AdvancedSearchResults extends AppCompatActivity {
                                 loader.setVisibility(View.GONE);
 
                                 // answer was not received from the API, display error to the user
-                                advancedSearchResultsSubheading.setText("Oops! That did not work :( \n Please try rephrasing your query.");
+                                advancedSearchResultsSubheading.setText("Oops! That did not work too well :( \n Please try rephrasing your query.");
                                 e.printStackTrace();
                             }
                         }
