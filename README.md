@@ -1,6 +1,6 @@
 # The Lazy Chef (Android)
 
-**_Find quick recipes based on the items in your kitchen!_**
+**_An all in one recipe aggregator for your home cooking adventures!_**
 
 ## Features
 
